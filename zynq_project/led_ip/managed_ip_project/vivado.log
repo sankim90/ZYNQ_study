@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Dec  8 17:42:43 2022
+# Process ID: 9276
+# Current directory: C:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19152 C:\Users\maglc\Desktop\local_work\Study\zynq_project\led_ip\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/managed_ip_project/vivado.log
+# Journal file: C:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/managed_ip_project/managed_ip_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/ip_repo/led_ip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 823.844 ; gain = 75.547
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP C:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/ip_repo/led_ip_1.0/example_designs/bfm_design/led_ip_v1_0_tb.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/ip_repo/led_ip_1.0/hdl/led_ip_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/ip_repo/led_ip_1.0/hdl/led_ip_v1_0_S_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/ip_repo/led_ip_1.0/src/lab3_user_logic.v:]
+WARNING: [Ipptcl 7-1467] The compile order has been set manually. This prevents the packager from updating                 it if necessary. If errors related to compile order occur, try enabling automatic                 reordering, or calling package_project with the -force_update_compile_order option
+INFO: [IP_Flow 19-5169] Module 'lab3_user_logic' uses SystemVerilog sources with a Verilog top file. These SystemVerilog files will not be analysed by the packager.
+INFO: [IP_Flow 19-5151] The Range '31:0' is present in all ports of the interface 'S_AXI'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5151] The Range '2:0' is present in all ports of the interface 'axi'. It is assumed that this is meant to declare an array of interface. If this is not the desired behaviour, switch of this feature by disabling the parameter 'ips.enableInterfaceArrayInference'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXI_ARESETN' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXI_ACLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXI_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXI_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'S_AXI_ARESETN'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'S_AXI_ACLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'S_AXI_ACLK': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory C:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/managed_ip_project/managed_ip_project.tmp c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/maglc/desktop/local_work/study/zynq_project/led_ip/managed_ip_project/managed_ip_project.tmp'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 855.234 ; gain = 28.125
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/ip_repo/led_ip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 867.965 ; gain = 40.855
+ipx::current_core c:/Users/maglc/Desktop/local_work/Study/zynq_project/led_ip/component.xml
+update_compile_order -fileset sources_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 18:46:48 2022...
