@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/maglc/Desktop/local_work/Study/zynq_project/lab6_IRQ/lab6_IRQ.runs/system_processing_system7_0_0_synth_1'
+HD_PWD='D:/Git_hub/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/system_processing_system7_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

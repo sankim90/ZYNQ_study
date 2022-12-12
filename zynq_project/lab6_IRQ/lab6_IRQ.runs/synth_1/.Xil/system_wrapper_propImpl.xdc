@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/maglc/Desktop/local_work/Study/2.Zynq-Design-using-Vivado-master/sources/lab3/lab3_zybo.xdc rfile:../../../../../2.Zynq-Design-using-Vivado-master/sources/lab3/lab3_zybo.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/ZYNQ/Zynq-Design-using-Vivado-master/sources/lab3/lab3_zybo.xdc rfile:../../../../../../../ZYNQ/Zynq-Design-using-Vivado-master/sources/lab3/lab3_zybo.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN M14 [get_ports LED[0]]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

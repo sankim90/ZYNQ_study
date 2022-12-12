@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Mon Dec 12 18:44:44 2022
+// Date        : Mon Dec 12 18:44:35 2022
 // Host        : DESKTOP-D5JKCJU running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/maglc/Desktop/local_work/Study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_led_ip_0_0/system_led_ip_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_led_ip_0_0 -prefix
+//               system_led_ip_0_0_ system_led_ip_0_0_stub.v
 // Design      : system_led_ip_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
