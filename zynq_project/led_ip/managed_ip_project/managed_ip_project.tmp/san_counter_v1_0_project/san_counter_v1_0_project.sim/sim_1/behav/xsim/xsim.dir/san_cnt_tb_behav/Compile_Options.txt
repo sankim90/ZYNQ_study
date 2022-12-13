@@ -1,0 +1,1 @@
+-wto "7fb720c149c04208b0e3169e79b41517" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "san_cnt_tb_behav" "xil_defaultlib.san_cnt_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

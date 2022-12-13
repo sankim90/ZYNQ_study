@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_cnt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module san_cnt
+INFO: [VRFC 10-2263] Analyzing Verilog file "d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_cnt_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module san_cnt_tb

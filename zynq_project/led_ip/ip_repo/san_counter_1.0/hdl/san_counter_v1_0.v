@@ -4,7 +4,7 @@
 	module san_counter_v1_0 #
 	(
 		// Users to add parameters here
-
+        parameter integer COUNT_DEPTH            = 8,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -15,7 +15,7 @@
 	)
 	(
 		// Users to add ports here
-
+        output wire san_flag,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -45,9 +45,11 @@
 	);
 // Instantiation of Axi Bus Interface S00_AXI
 	san_counter_v1_0_S00_AXI # ( 
+	    .COUNT_DEPTH(COUNT_DEPTH),
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) san_counter_v1_0_S00_AXI_inst (
+	    .san_flag(san_flag),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),

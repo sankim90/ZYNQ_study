@@ -1,0 +1,9 @@
+0.6
+2018.1
+Apr  4 2018
+19:30:32
+d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_cnt.v,1670915856,verilog,,d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_cnt_tb.v,,san_cnt,,,,,,,,
+d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_cnt_tb.v,1670913832,verilog,,,,san_cnt_tb,,,,,,,,
+d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_counter_v1_0.v,1670897202,verilog,,,,san_counter_v1_0,,,,,,,,
+d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_counter_v1_0_S00_AXI.v,1670911612,verilog,,d:/ZYNQ_study/zynq_project/led_ip/ip_repo/san_counter_1.0/hdl/san_counter_v1_0.v,,san_counter_v1_0_S00_AXI,,,,,,,,
+d:/ZYNQ_study/zynq_project/led_ip/managed_ip_project/managed_ip_project.tmp/san_counter_v1_0_project/san_counter_v1_0_project.sim/sim_1/behav/xsim/glbl.v,1522801934,verilog,,,,glbl,,,,,,,,

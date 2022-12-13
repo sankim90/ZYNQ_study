@@ -1,0 +1,7 @@
+Running: xsim.dir/san_counter_v1_0_behav/xsimk.exe -simmode gui -wdb san_counter_v1_0_behav.wdb -simrunnum 0 -socket 7315
+Design successfully loaded
+Design Loading Memory Usage: 10364 KB (Peak: 10364 KB)
+Design Loading CPU Usage: 108 ms
+Simulation completed
+Simulation Memory Usage: 10920 KB (Peak: 10920 KB)
+Simulation CPU Usage: 108 ms

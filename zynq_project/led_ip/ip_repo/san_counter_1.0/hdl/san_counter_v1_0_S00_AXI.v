@@ -4,7 +4,7 @@
 	module san_counter_v1_0_S00_AXI #
 	(
 		// Users to add parameters here
-
+        parameter integer COUNT_DEPTH            = 8,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -15,7 +15,7 @@
 	)
 	(
 		// Users to add ports here
-
+        output wire EXT_IRQ,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -393,12 +393,15 @@
 	      if (slv_reg_rden)
 	        begin
 	          axi_rdata <= reg_data_out;     // register read data
-	        end   
+	        end
 	    end
-	end    
+	end
 
 	// Add user logic here
-
+    san_cnt U1(.S_AXI_ACLK(S_AXI_ACLK), .slv_reg_wren(slv_reg_wren), .axi_awaddr(axi_awaddr),
+        .S_AXI_ARESETN(S_AXI_ARESETN), .S_AXI_WDATA(S_AXI_WDATA), .EXT_IRQ(EXT_IRQ)
+    //    , .COUNT_SAN(COUNT_SAN)
+    );
 	// User logic ends
 
 	endmodule
