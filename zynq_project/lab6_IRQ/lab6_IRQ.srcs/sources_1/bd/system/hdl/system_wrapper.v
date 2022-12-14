@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-//Date        : Tue Dec 13 00:54:18 2022
-//Host        : San-desktop running 64-bit major release  (build 9200)
+//Date        : Wed Dec 14 18:59:54 2022
+//Host        : DESKTOP-D5JKCJU running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
 //Purpose     : IP block netlist
@@ -33,7 +33,6 @@ module system_wrapper
     FIXED_IO_ps_srstb,
     LED,
     buttons_tri_i,
-    ext_irq,
     switches_tri_i);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -58,7 +57,6 @@ module system_wrapper
   inout FIXED_IO_ps_srstb;
   output [3:0]LED;
   input [3:0]buttons_tri_i;
-  input ext_irq;
   input [3:0]switches_tri_i;
 
   wire [14:0]DDR_addr;
@@ -84,7 +82,6 @@ module system_wrapper
   wire FIXED_IO_ps_srstb;
   wire [3:0]LED;
   wire [3:0]buttons_tri_i;
-  wire ext_irq;
   wire [3:0]switches_tri_i;
 
   system system_i
@@ -111,6 +108,5 @@ module system_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .LED(LED),
         .buttons_tri_i(buttons_tri_i),
-        .ext_irq(ext_irq),
         .switches_tri_i(switches_tri_i));
 endmodule
