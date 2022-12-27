@@ -24,3 +24,4 @@ module lab3_user_logic # (
           LED <= S_AXI_WDATA[LED_WIDTH-1:0];
       end
 endmodule
+[IP_Flow 19-627] Port 's00_axi_wdata': XPath expression failed: Undefined parameter "MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" used in expression "(spirit:decode(id('MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH')) - 1)".

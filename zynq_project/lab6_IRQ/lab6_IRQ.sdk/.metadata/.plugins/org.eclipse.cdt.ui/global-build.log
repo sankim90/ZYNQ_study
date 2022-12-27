@@ -1,65 +1,4 @@
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling xadcps"
-'Finished building libraries'
-18:16:29 **** Incremental Build of configuration Debug for project lab4 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab4_soln.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4_soln.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4_soln.d" -MT"src/lab4_soln.o" -o "src/lab4_soln.o" "../src/lab4_soln.c"
-'Finished building: ../src/lab4_soln.c'
-' '
-'Building target: lab4.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4_soln.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab4.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  23428	   1184	  22584	  47196	   b85c	lab4.elf
-'Finished building: lab4.elf.size'
-' '
-18:33:40 **** Incremental Build of configuration Debug for project lab4 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: `main-build'를 위해 할 일이 없습니다
-18:35:11 **** Clean-only build of configuration Debug for project lab4 ****
-make clean 
-rm -rf  ./src/lab4_soln.o  ./src/lab4_soln.d  lab4.elf.size  lab4.elf
-' '
-18:35:11 **** Auto Build of configuration Debug for project lab4 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab4_soln.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4_soln.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4_soln.d" -MT"src/lab4_soln.o" -o "src/lab4_soln.o" "../src/lab4_soln.c"
-'Finished building: ../src/lab4_soln.c'
-' '
-'Building target: lab4.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4_soln.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab4.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  23428	   1184	   8240	  32852	   8054	lab4.elf
-'Finished building: lab4.elf.size'
-' '
-18:36:17 **** Incremental Build of configuration Debug for project lab4 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: `main-build'를 위해 할 일이 없습니다
-17:27:22 **** Auto Build of project lab4_bsp ****
+16:09:13 **** Build of project lab6_IRQ_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src"
 make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -77,6 +16,8 @@ make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=a
 make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/led_ip_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/san_cnt_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/san_cnt_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
 make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
@@ -120,121 +61,14 @@ led_ip_selftest.c:52:55: warning: comparison between signed and unsigned integer
 led_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
   int Index;
       ^~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scugic"
-"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scutimer"
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scuwdt"
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_6/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling standalone"
-In file included from sleep.c:57:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from usleep.c:60:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xil_sleeptimer.c:54:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xtime_l.c:53:0:
-xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling xadcps"
-'Finished building libraries'
-17:29:04 **** Auto Build of configuration Debug for project lab4 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab4_soln.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4_soln.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab4_soln.d" -MT"src/lab4_soln.o" -o "src/lab4_soln.o" "../src/lab4_soln.c"
-'Finished building: ../src/lab4_soln.c'
-' '
-'Building target: lab4.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab4_bsp/ps7_cortexa9_0/lib -o "lab4.elf"  ./src/lab4_soln.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab4.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab4.elf  |tee "lab4.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  23428	   1184	   8240	  32852	   8054	lab4.elf
-'Finished building: lab4.elf.size'
-' '
-17:30:43 **** Build of project lab5_bsp ****
-make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/bram_v4_2/src"
-make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
-make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/led_ip_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_6/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/bram_v4_2/src"
-make -C ps7_cortexa9_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling bram"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
-"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling coresightps_dcc"
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling cpu_cortexa9"
-"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling ddrps"
-"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling devcfg"
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling dmaps"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
-make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in ps7_cortexa9_0/libsrc/led_ip_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/led_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling led_ip..."
-led_ip_selftest.c: In function 'LED_IP_Reg_SelfTest':
-led_ip_selftest.c:52:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( LED_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                       ^~
-led_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+"Running Make libs in ps7_cortexa9_0/libsrc/san_cnt_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/san_cnt_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling san_cnt..."
+san_cnt_selftest.c: In function 'SAN_CNT_Reg_SelfTest':
+san_cnt_selftest.c:52:56: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SAN_CNT_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                        ^~
+san_cnt_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
   int Index;
       ^~~~~
 "Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
@@ -272,726 +106,320 @@ make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-
-**** Build of configuration Debug for project lab5 ****
-
-Nothing to build for project lab5
-17:32:36 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c:7:1: error: unknown type name 'XScuTimer'
- XScuTimer Timer;  /* Cortex A9 SCU Private Timer Instance */
- ^~~~~~~~~
-../src/lab5.c: In function 'main':
-../src/lab5.c:18:4: error: unknown type name 'XScuTimer_Config'; did you mean 'XGpio_Config'?
-    XScuTimer_Config *ConfigPtr;
-    ^~~~~~~~~~~~~~~~
-    XGpio_Config
-../src/lab5.c:19:4: error: unknown type name 'XScuTimer'
-    XScuTimer *TimerInstancePtr = &Timer;
-    ^~~~~~~~~
-../src/lab5.c:48:5: warning: implicit declaration of function 'XScuTimer_Stop' [-Wimplicit-function-declaration]
-     XScuTimer_Stop(TimerInstancePtr);
-     ^~~~~~~~~~~~~~
-../src/lab5.c:59:7: warning: implicit declaration of function 'XScuTimer_IsExpired' [-Wimplicit-function-declaration]
-    if(XScuTimer_IsExpired(TimerInstancePtr)) {
-       ^~~~~~~~~~~~~~~~~~~
-../src/lab5.c:18:22: warning: unused variable 'ConfigPtr' [-Wunused-variable]
-    XScuTimer_Config *ConfigPtr;
-                      ^~~~~~~~~
-../src/lab5.c:15:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:15:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-make: *** [src/lab5.o] 오류 1
-17:42:08 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c:4:10: error: #include expects "FILENAME" or <FILENAME>
- #include “xscutimer.h”
-          ^
-../src/lab5.c:8:1: error: unknown type name 'XScuTimer'
- XScuTimer Timer;  /* Cortex A9 SCU Private Timer Instance */
- ^~~~~~~~~
-../src/lab5.c: In function 'main':
-../src/lab5.c:19:4: error: unknown type name 'XScuTimer_Config'; did you mean 'XGpio_Config'?
-    XScuTimer_Config *ConfigPtr;
-    ^~~~~~~~~~~~~~~~
-    XGpio_Config
-../src/lab5.c:20:4: error: unknown type name 'XScuTimer'
-    XScuTimer *TimerInstancePtr = &Timer;
-    ^~~~~~~~~
-../src/lab5.c:49:5: warning: implicit declaration of function 'XScuTimer_Stop' [-Wimplicit-function-declaration]
-     XScuTimer_Stop(TimerInstancePtr);
-     ^~~~~~~~~~~~~~
-../src/lab5.c:60:7: warning: implicit declaration of function 'XScuTimer_IsExpired' [-Wimplicit-function-declaration]
-    if(XScuTimer_IsExpired(TimerInstancePtr)) {
-       ^~~~~~~~~~~~~~~~~~~
-../src/lab5.c:19:22: warning: unused variable 'ConfigPtr' [-Wunused-variable]
-    XScuTimer_Config *ConfigPtr;
-                      ^~~~~~~~~
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-make: *** [src/lab5.o] 오류 1
-17:42:36 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:19:22: warning: unused variable 'ConfigPtr' [-Wunused-variable]
-    XScuTimer_Config *ConfigPtr;
-                      ^~~~~~~~~
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24216	   1184	  22600	  48000	   bb80	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-17:46:30 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:33:4: warning: statement with no effect [-Wunused-value]
-    XScuTimer_CfgInitialize
-    ^~~~~~~~~~~~~~~~~~~~~~~
-../src/lab5.c:35:4: error: expected ';' before 'dip_check_prev'
-    dip_check_prev = XGpio_DiscreteRead(&dip, 1);
-    ^~~~~~~~~~~~~~
-../src/lab5.c:19:22: warning: unused variable 'ConfigPtr' [-Wunused-variable]
-    XScuTimer_Config *ConfigPtr;
-                      ^~~~~~~~~
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-make: *** [src/lab5.o] 오류 1
-17:51:13 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24280	   1184	  22600	  48064	   bbc0	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-17:54:39 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24344	   1184	  22600	  48128	   bc00	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-17:59:22 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24408	   1184	  22600	  48192	   bc40	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:00:52 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24408	   1184	  22600	  48192	   bc40	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:40:10 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24472	   1184	  22600	  48256	   bc80	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:40:58 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24472	   1184	  22600	  48256	   bc80	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:41:06 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24472	   1184	  22600	  48256	   bc80	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:41:39 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-In file included from ../../lab5_bsp/ps7_cortexa9_0/include/xscutimer.h:117:0,
-                 from ../src/lab5.c:4:
-../src/lab5.c: In function 'main':
-../../lab5_bsp/ps7_cortexa9_0/include/xscutimer.h:338:33: error: expected expression before ')' token
-  XScuTimer_WriteReg((InstancePtr)->Config.BaseAddr,  \
-                                 ^
-../../lab5_bsp/ps7_cortexa9_0/include/xscutimer_hw.h:276:13: note: in definition of macro 'XScuTimer_WriteReg'
-  Xil_Out32((BaseAddr) + (RegOffset), (Data))
-             ^~~~~~~~
-../src/lab5.c:62:5: note: in expansion of macro 'XScuTimer_ClearInterruptStatus'
-     XScuTimer_ClearInterruptStatus();
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../../lab5_bsp/ps7_cortexa9_0/include/xscutimer_hw.h:276:2: error: too few arguments to function 'Xil_Out32'
-  Xil_Out32((BaseAddr) + (RegOffset), (Data))
-  ^
-../../lab5_bsp/ps7_cortexa9_0/include/xscutimer.h:338:2: note: in expansion of macro 'XScuTimer_WriteReg'
-  XScuTimer_WriteReg((InstancePtr)->Config.BaseAddr,  \
-  ^~~~~~~~~~~~~~~~~~
-../src/lab5.c:62:5: note: in expansion of macro 'XScuTimer_ClearInterruptStatus'
-     XScuTimer_ClearInterruptStatus();
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../../lab5_bsp/ps7_cortexa9_0/include/xgpio_l.h:87:0,
-                 from ../../lab5_bsp/ps7_cortexa9_0/include/xgpio.h:136,
-                 from ../src/lab5.c:2:
-../../lab5_bsp/ps7_cortexa9_0/include/xil_io.h:223:20: note: declared here
- static INLINE void Xil_Out32(UINTPTR Addr, u32 Value)
-                    ^~~~~~~~~
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-make: *** [src/lab5.o] 오류 1
-18:41:54 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24472	   1184	  22600	  48256	   bc80	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:43:06 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:65:22: error: macro "LED_IP_mWriteReg" requires 3 arguments, but only 1 given
-     LED_IP_mWriteReg();
-                      ^
-../src/lab5.c:65:5: error: 'LED_IP_mWriteReg' undeclared (first use in this function)
-     LED_IP_mWriteReg();
-     ^~~~~~~~~~~~~~~~
-../src/lab5.c:65:5: note: each undeclared identifier is reported only once for each function it appears in
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:16:46: warning: variable 'count' set but not used [-Wunused-but-set-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                              ^~~~~
-make: *** [src/lab5.o] 오류 1
-18:44:08 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:33:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24536	   1184	  22600	  48320	   bcc0	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:45:00 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:33:4: error: too few arguments to function 'XScuTimer_LookupConfig'
-    XScuTimer_LookupConfig();
-    ^~~~~~~~~~~~~~~~~~~~~~
-In file included from ../src/lab5.c:4:0:
-../../lab5_bsp/ps7_cortexa9_0/include/xscutimer.h:346:19: note: declared here
- XScuTimer_Config *XScuTimer_LookupConfig(u16 DeviceId);
-                   ^~~~~~~~~~~~~~~~~~~~~~
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-make: *** [src/lab5.o] 오류 1
-18:45:23 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:34:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, XPAR_PS7_SCUTIMER_0_BASEADDR);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24536	   1192	  22600	  48328	   bcc8	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:47:51 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:34:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24536	   1192	  22600	  48328	   bcc8	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:50:25 **** Incremental Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: `main-build'를 위해 할 일이 없습니다
-18:51:20 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:34:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24536	   1192	  22600	  48328	   bcc8	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:51:25 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:34:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24536	   1192	  22600	  48328	   bcc8	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:51:43 **** Incremental Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: `main-build'를 위해 할 일이 없습니다
-18:54:34 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:11:4: error: unknown type name 'XGpio'
-    XGpio dip, push;
-    ^~~~~
-../src/lab5.c:20:4: warning: implicit declaration of function 'XGpio_Initialize'; did you mean 'XScuTimer_CfgInitialize'? [-Wimplicit-function-declaration]
-    XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID);
-    ^~~~~~~~~~~~~~~~
-    XScuTimer_CfgInitialize
-../src/lab5.c:21:4: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
-    XGpio_SetDataDirection(&dip, 1, 0xffffffff);
-    ^~~~~~~~~~~~~~~~~~~~~~
-../src/lab5.c:36:21: warning: implicit declaration of function 'XGpio_DiscreteRead' [-Wimplicit-function-declaration]
-    dip_check_prev = XGpio_DiscreteRead(&dip, 1);
-                     ^~~~~~~~~~~~~~~~~~
-../src/lab5.c:65:8: warning: implicit declaration of function 'LED_IP_mWriteReg' [-Wimplicit-function-declaration]
-        LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR, 0, count);
-        ^~~~~~~~~~~~~~~~
-make: *** [src/lab5.o] 오류 1
-18:54:56 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:11:4: error: unknown type name 'XGpio'
-    XGpio dip, push;
-    ^~~~~
-../src/lab5.c:20:4: warning: implicit declaration of function 'XGpio_Initialize'; did you mean 'XScuTimer_CfgInitialize'? [-Wimplicit-function-declaration]
-    XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID);
-    ^~~~~~~~~~~~~~~~
-    XScuTimer_CfgInitialize
-../src/lab5.c:21:4: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
-    XGpio_SetDataDirection(&dip, 1, 0xffffffff);
-    ^~~~~~~~~~~~~~~~~~~~~~
-../src/lab5.c:36:21: warning: implicit declaration of function 'XGpio_DiscreteRead' [-Wimplicit-function-declaration]
-    dip_check_prev = XGpio_DiscreteRead(&dip, 1);
-                     ^~~~~~~~~~~~~~~~~~
-../src/lab5.c:65:8: warning: implicit declaration of function 'LED_IP_mWriteReg' [-Wimplicit-function-declaration]
-        LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR, 0, count);
-        ^~~~~~~~~~~~~~~~
-make: *** [src/lab5.o] 오류 1
-18:55:13 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5.d" -MT"src/lab5.o" -o "src/lab5.o" "../src/lab5.c"
-../src/lab5.c: In function 'main':
-../src/lab5.c:16:53: warning: unused variable 'Status' [-Wunused-variable]
-    int psb_check, dip_check, dip_check_prev, count, Status;
-                                                     ^~~~~~
-../src/lab5.c:34:4: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
-    XScuTimer_CfgInitialize(TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/lab5.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24536	   1192	  22600	  48328	   bcc8	lab5.elf
-'Finished building: lab5.elf.size'
-' '
-18:55:34 **** Auto Build of configuration Debug for project lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/lab5_completed.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5_completed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5_completed.d" -MT"src/lab5_completed.o" -o "src/lab5_completed.o" "../src/lab5_completed.c"
-'Finished building: ../src/lab5_completed.c'
-' '
-'Building target: lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5.o ./src/lab5_completed.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-./src/lab5_completed.o: In function `main':
-C:\Users\maglc\Desktop\local_work\Study\zynq_project\lab5\lab5.sdk\lab5\Debug/../src/lab5_completed.c:12: multiple definition of `main'
-./src/lab5.o:C:\Users\maglc\Desktop\local_work\Study\zynq_project\lab5\lab5.sdk\lab5\Debug/../src/lab5.c:13: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [lab5.elf] 오류 1
-18:55:43 **** Clean-only build of configuration Debug for project lab5 ****
+16:10:35 **** Clean-only build of configuration Debug for project lab6_IRQ ****
 make clean 
-rm -rf  ./src/lab5.o ./src/lab5_completed.o  ./src/lab5.d ./src/lab5_completed.d  lab5.elf.size  lab5.elf
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lab6_IRQ.elf.size  lab6_IRQ.elf
 ' '
-18:55:43 **** Auto Build of configuration Debug for project lab5 ****
+16:10:38 **** Build of configuration Debug for project lab6_IRQ ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/lab5_completed.c'
+'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab5_completed.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lab5_completed.d" -MT"src/lab5_completed.o" -o "src/lab5_completed.o" "../src/lab5_completed.c"
-'Finished building: ../src/lab5_completed.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: lab5.elf'
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lab6_IRQ.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab5_bsp/ps7_cortexa9_0/lib -o "lab5.elf"  ./src/lab5_completed.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lab5.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lab5.elf  |tee "lab5.elf.size"
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  24624	   1192	  22600	  48416	   bd20	lab5.elf
-'Finished building: lab5.elf.size'
+  22248	   1144	  22568	  45960	   b388	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
 ' '
-18:55:54 **** Incremental Build of configuration Debug for project lab5 ****
+16:11:48 **** Incremental Build of configuration Debug for project lab6_IRQ ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: `main-build'를 위해 할 일이 없습니다
-18:58:30 **** Incremental Build of configuration Debug for project lab5 ****
+16:14:16 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:53:0:
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:58: error: 'i' undeclared (first use in this function)
+    rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i*4);
+                                                          ^
+../../lab6_IRQ_bsp/ps7_cortexa9_0/include/san_cnt.h:55:31: note: in definition of macro 'SAN_CNT_mReadReg'
+     Xil_In32((BaseAddress) + (RegOffset))
+                               ^~~~~~~~~
+../src/helloworld.c:66:58: note: each undeclared identifier is reported only once for each function it appears in
+    rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i*4);
+                                                          ^
+../../lab6_IRQ_bsp/ps7_cortexa9_0/include/san_cnt.h:55:31: note: in definition of macro 'SAN_CNT_mReadReg'
+     Xil_In32((BaseAddress) + (RegOffset))
+                               ^~~~~~~~~
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+make: *** [src/helloworld.o] 오류 1
+16:14:33 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab6_IRQ.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22164	   1144	  22568	  45876	   b334	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
+' '
+16:14:56 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+17:43:09 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab6_IRQ.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22184	   1144	  22568	  45896	   b348	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
+' '
+17:43:20 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab6_IRQ.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22184	   1144	  22568	  45896	   b348	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
+' '
+17:46:05 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab6_IRQ.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22248	   1144	  22568	  45960	   b388	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
+' '
+17:46:43 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab6_IRQ.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22248	   1144	  22568	  45960	   b388	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
+' '
+17:46:58 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+17:49:31 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+17:54:49 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+17:55:02 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+17:56:11 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab6_IRQ.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22248	   1144	  22568	  45960	   b388	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
+' '
+17:56:18 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+17:56:49 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+17:57:33 **** Auto Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_IRQ_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/helloworld.c:57:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lab6_IRQ.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_IRQ_bsp/ps7_cortexa9_0/lib -o "lab6_IRQ.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_IRQ.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_IRQ.elf  |tee "lab6_IRQ.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22248	   1144	  22568	  45960	   b388	lab6_IRQ.elf
+'Finished building: lab6_IRQ.elf.size'
+' '
+17:57:39 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+18:07:49 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+18:08:57 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+18:10:43 **** Incremental Build of configuration Debug for project lab6_IRQ ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+18:10:54 **** Incremental Build of configuration Debug for project lab6_IRQ ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

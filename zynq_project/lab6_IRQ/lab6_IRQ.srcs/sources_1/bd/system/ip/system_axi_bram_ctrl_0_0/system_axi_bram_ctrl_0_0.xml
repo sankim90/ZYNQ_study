@@ -1966,6 +1966,10 @@ The register is automatically cleared after the fault has been injected.
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Dec 26 10:09:10 UTC 2022</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>8:477d5023</spirit:value>
           </spirit:parameter>

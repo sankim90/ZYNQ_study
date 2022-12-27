@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='d:/zynq_study/zynq_project/san_counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1'
+HD_PWD='D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
