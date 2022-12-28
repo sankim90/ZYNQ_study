@@ -100,10 +100,10 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_0/sim/system_axi_bram_ctrl_0_bram_0.v" \
   "../../../bd/system/sim/system.v" \
-  "../../../bd/system/ipshared/c021/hdl/san_cnt_v1_0_S_AXI.v" \
-  "../../../bd/system/ipshared/c021/hdl/san_cnt_v1_0_S_AXI_INTR.v" \
-  "../../../bd/system/ipshared/c021/src/san_cnt.v" \
-  "../../../bd/system/ipshared/c021/hdl/san_cnt_v1_0.v" \
+  "../../../bd/system/ipshared/c0b3/hdl/san_cnt_v1_0_S_AXI.v" \
+  "../../../bd/system/ipshared/c0b3/hdl/san_cnt_v1_0_S_AXI_INTR.v" \
+  "../../../bd/system/ipshared/c0b3/src/san_cnt.v" \
+  "../../../bd/system/ipshared/c0b3/hdl/san_cnt_v1_0.v" \
   "../../../bd/system/ip/system_san_cnt_0_0/sim/system_san_cnt_0_0.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_16 \

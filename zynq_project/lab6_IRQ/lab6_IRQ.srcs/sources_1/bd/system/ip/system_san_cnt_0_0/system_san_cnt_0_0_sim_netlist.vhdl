@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
--- Date        : Tue Dec 27 17:05:56 2022
--- Host        : DESKTOP-D5JKCJU running 64-bit major release  (build 9200)
+-- Date        : Thu Dec 29 22:41:08 2022
+-- Host        : San-desktop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_san_cnt_0_0/system_san_cnt_0_0_sim_netlist.vhdl
 -- Design      : system_san_cnt_0_0
@@ -16,9 +16,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_san_cnt_0_0_san_cnt is
   port (
-    EXT_IRQ : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    EXT_IRQ : out STD_LOGIC;
+    \slv_reg_wren__0\ : out STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    axi_wready_reg : in STD_LOGIC;
+    axi_awready_reg : in STD_LOGIC;
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_wvalid : in STD_LOGIC;
+    \axi_awaddr_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_aresetn : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -28,10 +35,14 @@ end system_san_cnt_0_0_san_cnt;
 architecture STRUCTURE of system_san_cnt_0_0_san_cnt is
   signal \COUNT_SAN[7]_i_2_n_0\ : STD_LOGIC;
   signal \COUNT_SAN_reg__0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \^ext_irq\ : STD_LOGIC;
   signal \^ext_irq_reg\ : STD_LOGIC;
   signal EXT_IRQ_REG_i_1_n_0 : STD_LOGIC;
+  signal EXT_IRQ_i_2_n_0 : STD_LOGIC;
+  signal EXT_IRQ_i_4_n_0 : STD_LOGIC;
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal p_0_in : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \^slv_reg_wren__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \COUNT_SAN[1]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \COUNT_SAN[2]_i_1\ : label is "soft_lutpair7";
@@ -40,7 +51,9 @@ architecture STRUCTURE of system_san_cnt_0_0_san_cnt is
   attribute SOFT_HLUTNM of \COUNT_SAN[7]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of EXT_IRQ_REG_i_1 : label is "soft_lutpair6";
 begin
+  EXT_IRQ <= \^ext_irq\;
   SR(0) <= \^sr\(0);
+  \slv_reg_wren__0\ <= \^slv_reg_wren__0\;
 \COUNT_SAN[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -227,12 +240,45 @@ EXT_IRQ_i_1: unisim.vcomponents.LUT1
       I0 => s_axi_aresetn,
       O => \^sr\(0)
     );
+EXT_IRQ_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BF80"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => \^slv_reg_wren__0\,
+      I2 => EXT_IRQ_i_4_n_0,
+      I3 => \^ext_irq\,
+      O => EXT_IRQ_i_2_n_0
+    );
+EXT_IRQ_i_3: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => axi_wready_reg,
+      I1 => axi_awready_reg,
+      I2 => s_axi_awvalid,
+      I3 => s_axi_wvalid,
+      O => \^slv_reg_wren__0\
+    );
+EXT_IRQ_i_4: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0080"
+    )
+        port map (
+      I0 => \^ext_irq_reg\,
+      I1 => \axi_awaddr_reg[2]\(1),
+      I2 => \axi_awaddr_reg[2]\(0),
+      I3 => \axi_awaddr_reg[2]\(2),
+      O => EXT_IRQ_i_4_n_0
+    );
 EXT_IRQ_reg: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \^ext_irq_reg\,
-      Q => EXT_IRQ,
+      D => EXT_IRQ_i_2_n_0,
+      Q => \^ext_irq\,
       R => \^sr\(0)
     );
 end STRUCTURE;
@@ -935,9 +981,9 @@ entity system_san_cnt_0_0_san_cnt_v1_0_S_AXI is
     s_axi_bready : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aresetn : in STD_LOGIC
   );
@@ -953,16 +999,16 @@ architecture STRUCTURE of system_san_cnt_0_0_san_cnt_v1_0_S_AXI is
   signal \axi_araddr[2]_i_1_n_0\ : STD_LOGIC;
   signal \axi_araddr[3]_i_1_n_0\ : STD_LOGIC;
   signal axi_arready0 : STD_LOGIC;
-  signal \axi_awaddr[2]_i_1_n_0\ : STD_LOGIC;
-  signal \axi_awaddr[3]_i_1_n_0\ : STD_LOGIC;
-  signal \axi_awaddr_reg_n_0_[2]\ : STD_LOGIC;
+  signal \axi_awaddr_reg_n_0_[0]\ : STD_LOGIC;
+  signal \axi_awaddr_reg_n_0_[1]\ : STD_LOGIC;
   signal \axi_awaddr_reg_n_0_[3]\ : STD_LOGIC;
   signal axi_awready0 : STD_LOGIC;
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
   signal clear : STD_LOGIC;
-  signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 7 );
+  signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal p_3_in : STD_LOGIC_VECTOR ( 0 to 0 );
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s_axi_arready\ : STD_LOGIC;
   signal \^s_axi_awready\ : STD_LOGIC;
@@ -974,41 +1020,39 @@ architecture STRUCTURE of system_san_cnt_0_0_san_cnt_v1_0_S_AXI is
   signal \slv_reg_wren__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \axi_rdata[0]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \axi_rdata[10]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \axi_rdata[11]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \axi_rdata[12]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \axi_rdata[13]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \axi_rdata[14]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \axi_rdata[15]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \axi_rdata[16]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \axi_rdata[17]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \axi_rdata[18]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \axi_rdata[19]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \axi_rdata[10]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \axi_rdata[11]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \axi_rdata[12]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \axi_rdata[13]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \axi_rdata[14]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \axi_rdata[15]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \axi_rdata[16]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \axi_rdata[17]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \axi_rdata[18]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \axi_rdata[19]_i_1\ : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \axi_rdata[1]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \axi_rdata[20]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \axi_rdata[21]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \axi_rdata[22]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \axi_rdata[23]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \axi_rdata[24]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \axi_rdata[25]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \axi_rdata[26]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \axi_rdata[27]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \axi_rdata[28]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \axi_rdata[29]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \axi_rdata[2]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \axi_rdata[30]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \axi_rdata[31]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \axi_rdata[3]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \axi_rdata[20]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \axi_rdata[21]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \axi_rdata[22]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \axi_rdata[23]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \axi_rdata[24]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \axi_rdata[25]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \axi_rdata[26]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \axi_rdata[27]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \axi_rdata[28]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \axi_rdata[29]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \axi_rdata[2]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \axi_rdata[30]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \axi_rdata[31]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \axi_rdata[3]_i_1\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \axi_rdata[4]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \axi_rdata[5]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \axi_rdata[6]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \axi_rdata[7]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \axi_rdata[8]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \axi_rdata[9]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \axi_rdata[5]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \axi_rdata[6]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \axi_rdata[7]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \axi_rdata[8]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \axi_rdata[9]_i_1\ : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair10";
 begin
   EXT_IRQ <= \^ext_irq\;
   s_axi_arready <= \^s_axi_arready\;
@@ -1019,9 +1063,18 @@ begin
 U1: entity work.system_san_cnt_0_0_san_cnt
      port map (
       EXT_IRQ => \^ext_irq\,
+      Q(0) => slv_reg3(0),
       SR(0) => clear,
+      \axi_awaddr_reg[2]\(2) => p_3_in(0),
+      \axi_awaddr_reg[2]\(1) => \axi_awaddr_reg_n_0_[1]\,
+      \axi_awaddr_reg[2]\(0) => \axi_awaddr_reg_n_0_[0]\,
+      axi_awready_reg => \^s_axi_awready\,
+      axi_wready_reg => \^s_axi_wready\,
       s_axi_aclk => s_axi_aclk,
-      s_axi_aresetn => s_axi_aresetn
+      s_axi_aresetn => s_axi_aresetn,
+      s_axi_awvalid => s_axi_awvalid,
+      s_axi_wvalid => s_axi_wvalid,
+      \slv_reg_wren__0\ => \slv_reg_wren__0\
     );
 aw_en_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -1099,45 +1152,35 @@ axi_arready_reg: unisim.vcomponents.FDRE
       Q => \^s_axi_arready\,
       R => clear
     );
-\axi_awaddr[2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FBFFFFFF08000000"
-    )
-        port map (
-      I0 => s_axi_awaddr(0),
-      I1 => s_axi_wvalid,
-      I2 => \^s_axi_awready\,
-      I3 => aw_en_reg_n_0,
-      I4 => s_axi_awvalid,
-      I5 => \axi_awaddr_reg_n_0_[2]\,
-      O => \axi_awaddr[2]_i_1_n_0\
+\axi_awaddr_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => axi_awready0,
+      D => s_axi_awaddr(0),
+      Q => \axi_awaddr_reg_n_0_[0]\,
+      R => clear
     );
-\axi_awaddr[3]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FBFFFFFF08000000"
-    )
-        port map (
-      I0 => s_axi_awaddr(1),
-      I1 => s_axi_wvalid,
-      I2 => \^s_axi_awready\,
-      I3 => aw_en_reg_n_0,
-      I4 => s_axi_awvalid,
-      I5 => \axi_awaddr_reg_n_0_[3]\,
-      O => \axi_awaddr[3]_i_1_n_0\
+\axi_awaddr_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axi_aclk,
+      CE => axi_awready0,
+      D => s_axi_awaddr(1),
+      Q => \axi_awaddr_reg_n_0_[1]\,
+      R => clear
     );
 \axi_awaddr_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => '1',
-      D => \axi_awaddr[2]_i_1_n_0\,
-      Q => \axi_awaddr_reg_n_0_[2]\,
+      CE => axi_awready0,
+      D => s_axi_awaddr(2),
+      Q => p_3_in(0),
       R => clear
     );
 \axi_awaddr_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => '1',
-      D => \axi_awaddr[3]_i_1_n_0\,
+      CE => axi_awready0,
+      D => s_axi_awaddr(3),
       Q => \axi_awaddr_reg_n_0_[3]\,
       R => clear
     );
@@ -1803,7 +1846,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \slv_reg_wren__0\,
       I1 => s_axi_wstrb(1),
-      I2 => \axi_awaddr_reg_n_0_[2]\,
+      I2 => p_3_in(0),
       I3 => \axi_awaddr_reg_n_0_[3]\,
       O => p_1_in(15)
     );
@@ -1814,7 +1857,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \slv_reg_wren__0\,
       I1 => s_axi_wstrb(2),
-      I2 => \axi_awaddr_reg_n_0_[2]\,
+      I2 => p_3_in(0),
       I3 => \axi_awaddr_reg_n_0_[3]\,
       O => p_1_in(23)
     );
@@ -1825,20 +1868,9 @@ axi_wready_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \slv_reg_wren__0\,
       I1 => s_axi_wstrb(3),
-      I2 => \axi_awaddr_reg_n_0_[2]\,
+      I2 => p_3_in(0),
       I3 => \axi_awaddr_reg_n_0_[3]\,
       O => p_1_in(31)
-    );
-\slv_reg3[31]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
-    )
-        port map (
-      I0 => \^s_axi_wready\,
-      I1 => \^s_axi_awready\,
-      I2 => s_axi_awvalid,
-      I3 => s_axi_wvalid,
-      O => \slv_reg_wren__0\
     );
 \slv_reg3[7]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -1847,14 +1879,14 @@ axi_wready_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \slv_reg_wren__0\,
       I1 => s_axi_wstrb(0),
-      I2 => \axi_awaddr_reg_n_0_[2]\,
+      I2 => p_3_in(0),
       I3 => \axi_awaddr_reg_n_0_[3]\,
-      O => p_1_in(7)
+      O => p_1_in(0)
     );
 \slv_reg3_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(0),
       Q => slv_reg3(0),
       R => clear
@@ -1942,7 +1974,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg3_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(1),
       Q => slv_reg3(1),
       R => clear
@@ -2030,7 +2062,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg3_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(2),
       Q => slv_reg3(2),
       R => clear
@@ -2054,7 +2086,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg3_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(3),
       Q => slv_reg3(3),
       R => clear
@@ -2062,7 +2094,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg3_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(4),
       Q => slv_reg3(4),
       R => clear
@@ -2070,7 +2102,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg3_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(5),
       Q => slv_reg3(5),
       R => clear
@@ -2078,7 +2110,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg3_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(6),
       Q => slv_reg3(6),
       R => clear
@@ -2086,7 +2118,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
 \slv_reg3_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(7),
+      CE => p_1_in(0),
       D => s_axi_wdata(7),
       Q => slv_reg3(7),
       R => clear
@@ -2139,19 +2171,19 @@ entity system_san_cnt_0_0_san_cnt_v1_0 is
     s_axi_bvalid : out STD_LOGIC;
     s_axi_intr_bvalid : out STD_LOGIC;
     s_axi_intr_aresetn : in STD_LOGIC;
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_arvalid : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_wvalid : in STD_LOGIC;
-    s_axi_awvalid : in STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_intr_aclk : in STD_LOGIC;
     s_axi_intr_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_intr_awvalid : in STD_LOGIC;
     s_axi_intr_wvalid : in STD_LOGIC;
     s_axi_intr_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_intr_arvalid : in STD_LOGIC;
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_wvalid : in STD_LOGIC;
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aresetn : in STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
@@ -2194,7 +2226,7 @@ san_cnt_v1_0_S_AXI_inst: entity work.system_san_cnt_0_0_san_cnt_v1_0_S_AXI
       s_axi_aresetn => s_axi_aresetn,
       s_axi_arready => s_axi_arready,
       s_axi_arvalid => s_axi_arvalid,
-      s_axi_awaddr(1 downto 0) => s_axi_awaddr(1 downto 0),
+      s_axi_awaddr(3 downto 0) => s_axi_awaddr(3 downto 0),
       s_axi_awready => s_axi_awready,
       s_axi_awvalid => s_axi_awvalid,
       s_axi_bready => s_axi_bready,
@@ -2380,7 +2412,7 @@ inst: entity work.system_san_cnt_0_0_san_cnt_v1_0
       s_axi_aresetn => s_axi_aresetn,
       s_axi_arready => s_axi_arready,
       s_axi_arvalid => s_axi_arvalid,
-      s_axi_awaddr(1 downto 0) => s_axi_awaddr(3 downto 2),
+      s_axi_awaddr(3 downto 0) => s_axi_awaddr(3 downto 0),
       s_axi_awready => s_axi_awready,
       s_axi_awvalid => s_axi_awvalid,
       s_axi_bready => s_axi_bready,

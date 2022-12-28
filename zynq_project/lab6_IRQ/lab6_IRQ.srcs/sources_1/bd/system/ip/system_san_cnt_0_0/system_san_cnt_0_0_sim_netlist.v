@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Tue Dec 27 17:05:56 2022
-// Host        : DESKTOP-D5JKCJU running 64-bit major release  (build 9200)
+// Date        : Thu Dec 29 22:41:08 2022
+// Host        : San-desktop running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_san_cnt_0_0/system_san_cnt_0_0_sim_netlist.v
 // Design      : system_san_cnt_0_0
@@ -191,7 +191,7 @@ module system_san_cnt_0_0
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_arready(s_axi_arready),
         .s_axi_arvalid(s_axi_arvalid),
-        .s_axi_awaddr(s_axi_awaddr[3:2]),
+        .s_axi_awaddr(s_axi_awaddr),
         .s_axi_awready(s_axi_awready),
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_bready(s_axi_bready),
@@ -223,13 +223,27 @@ endmodule
 
 (* ORIG_REF_NAME = "san_cnt" *) 
 module system_san_cnt_0_0_san_cnt
-   (EXT_IRQ,
-    SR,
+   (SR,
+    EXT_IRQ,
+    slv_reg_wren__0,
     s_axi_aclk,
+    Q,
+    axi_wready_reg,
+    axi_awready_reg,
+    s_axi_awvalid,
+    s_axi_wvalid,
+    \axi_awaddr_reg[2] ,
     s_axi_aresetn);
-  output EXT_IRQ;
   output [0:0]SR;
+  output EXT_IRQ;
+  output slv_reg_wren__0;
   input s_axi_aclk;
+  input [0:0]Q;
+  input axi_wready_reg;
+  input axi_awready_reg;
+  input s_axi_awvalid;
+  input s_axi_wvalid;
+  input [2:0]\axi_awaddr_reg[2] ;
   input s_axi_aresetn;
 
   wire \COUNT_SAN[7]_i_2_n_0 ;
@@ -237,10 +251,19 @@ module system_san_cnt_0_0_san_cnt
   wire EXT_IRQ;
   wire EXT_IRQ_REG;
   wire EXT_IRQ_REG_i_1_n_0;
+  wire EXT_IRQ_i_2_n_0;
+  wire EXT_IRQ_i_4_n_0;
+  wire [0:0]Q;
   wire [0:0]SR;
+  wire [2:0]\axi_awaddr_reg[2] ;
+  wire axi_awready_reg;
+  wire axi_wready_reg;
   wire [7:0]p_0_in;
   wire s_axi_aclk;
   wire s_axi_aresetn;
+  wire s_axi_awvalid;
+  wire s_axi_wvalid;
+  wire slv_reg_wren__0;
 
   LUT1 #(
     .INIT(2'h1)) 
@@ -383,10 +406,34 @@ module system_san_cnt_0_0_san_cnt
     EXT_IRQ_i_1
        (.I0(s_axi_aresetn),
         .O(SR));
+  LUT4 #(
+    .INIT(16'hBF80)) 
+    EXT_IRQ_i_2
+       (.I0(Q),
+        .I1(slv_reg_wren__0),
+        .I2(EXT_IRQ_i_4_n_0),
+        .I3(EXT_IRQ),
+        .O(EXT_IRQ_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    EXT_IRQ_i_3
+       (.I0(axi_wready_reg),
+        .I1(axi_awready_reg),
+        .I2(s_axi_awvalid),
+        .I3(s_axi_wvalid),
+        .O(slv_reg_wren__0));
+  LUT4 #(
+    .INIT(16'h0080)) 
+    EXT_IRQ_i_4
+       (.I0(EXT_IRQ_REG),
+        .I1(\axi_awaddr_reg[2] [1]),
+        .I2(\axi_awaddr_reg[2] [0]),
+        .I3(\axi_awaddr_reg[2] [2]),
+        .O(EXT_IRQ_i_4_n_0));
   FDRE EXT_IRQ_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(EXT_IRQ_REG),
+        .D(EXT_IRQ_i_2_n_0),
         .Q(EXT_IRQ),
         .R(SR));
 endmodule
@@ -408,19 +455,19 @@ module system_san_cnt_0_0_san_cnt_v1_0
     s_axi_bvalid,
     s_axi_intr_bvalid,
     s_axi_intr_aresetn,
+    s_axi_awaddr,
     s_axi_aclk,
+    s_axi_wdata,
     s_axi_araddr,
     s_axi_arvalid,
-    s_axi_awaddr,
-    s_axi_wvalid,
-    s_axi_awvalid,
-    s_axi_wdata,
     s_axi_intr_aclk,
     s_axi_intr_awaddr,
     s_axi_intr_awvalid,
     s_axi_intr_wvalid,
     s_axi_intr_araddr,
     s_axi_intr_arvalid,
+    s_axi_awvalid,
+    s_axi_wvalid,
     s_axi_wstrb,
     s_axi_aresetn,
     s_axi_bready,
@@ -443,19 +490,19 @@ module system_san_cnt_0_0_san_cnt_v1_0
   output s_axi_bvalid;
   output s_axi_intr_bvalid;
   input s_axi_intr_aresetn;
+  input [3:0]s_axi_awaddr;
   input s_axi_aclk;
+  input [31:0]s_axi_wdata;
   input [1:0]s_axi_araddr;
   input s_axi_arvalid;
-  input [1:0]s_axi_awaddr;
-  input s_axi_wvalid;
-  input s_axi_awvalid;
-  input [31:0]s_axi_wdata;
   input s_axi_intr_aclk;
   input [2:0]s_axi_intr_awaddr;
   input s_axi_intr_awvalid;
   input s_axi_intr_wvalid;
   input [2:0]s_axi_intr_araddr;
   input s_axi_intr_arvalid;
+  input s_axi_awvalid;
+  input s_axi_wvalid;
   input [3:0]s_axi_wstrb;
   input s_axi_aresetn;
   input s_axi_bready;
@@ -471,7 +518,7 @@ module system_san_cnt_0_0_san_cnt_v1_0
   wire s_axi_aresetn;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [1:0]s_axi_awaddr;
+  wire [3:0]s_axi_awaddr;
   wire s_axi_awready;
   wire s_axi_awvalid;
   wire s_axi_bready;
@@ -554,9 +601,9 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
     s_axi_bready,
     s_axi_arvalid,
     s_axi_rready,
-    s_axi_araddr,
     s_axi_awaddr,
     s_axi_wdata,
+    s_axi_araddr,
     s_axi_wstrb,
     s_axi_aresetn);
   output s_axi_wready;
@@ -572,9 +619,9 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
   input s_axi_bready;
   input s_axi_arvalid;
   input s_axi_rready;
-  input [1:0]s_axi_araddr;
-  input [1:0]s_axi_awaddr;
+  input [3:0]s_axi_awaddr;
   input [31:0]s_axi_wdata;
+  input [1:0]s_axi_araddr;
   input [3:0]s_axi_wstrb;
   input s_axi_aresetn;
 
@@ -585,23 +632,23 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
   wire \axi_araddr[2]_i_1_n_0 ;
   wire \axi_araddr[3]_i_1_n_0 ;
   wire axi_arready0;
-  wire \axi_awaddr[2]_i_1_n_0 ;
-  wire \axi_awaddr[3]_i_1_n_0 ;
-  wire \axi_awaddr_reg_n_0_[2] ;
+  wire \axi_awaddr_reg_n_0_[0] ;
+  wire \axi_awaddr_reg_n_0_[1] ;
   wire \axi_awaddr_reg_n_0_[3] ;
   wire axi_awready0;
   wire axi_bvalid_i_1_n_0;
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0;
   wire clear;
-  wire [31:7]p_1_in;
+  wire [31:0]p_1_in;
+  wire [0:0]p_3_in;
   wire [31:0]reg_data_out;
   wire s_axi_aclk;
   wire [1:0]s_axi_araddr;
   wire s_axi_aresetn;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [1:0]s_axi_awaddr;
+  wire [3:0]s_axi_awaddr;
   wire s_axi_awready;
   wire s_axi_awvalid;
   wire s_axi_bready;
@@ -619,9 +666,16 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
 
   system_san_cnt_0_0_san_cnt U1
        (.EXT_IRQ(EXT_IRQ),
+        .Q(slv_reg3[0]),
         .SR(clear),
+        .\axi_awaddr_reg[2] ({p_3_in,\axi_awaddr_reg_n_0_[1] ,\axi_awaddr_reg_n_0_[0] }),
+        .axi_awready_reg(s_axi_awready),
+        .axi_wready_reg(s_axi_wready),
         .s_axi_aclk(s_axi_aclk),
-        .s_axi_aresetn(s_axi_aresetn));
+        .s_axi_aresetn(s_axi_aresetn),
+        .s_axi_awvalid(s_axi_awvalid),
+        .s_axi_wvalid(s_axi_wvalid),
+        .slv_reg_wren__0(slv_reg_wren__0));
   LUT6 #(
     .INIT(64'hF7FFC4CCC4CCC4CC)) 
     aw_en_i_1
@@ -679,39 +733,30 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .D(axi_arready0),
         .Q(s_axi_arready),
         .R(clear));
-  LUT6 #(
-    .INIT(64'hFBFFFFFF08000000)) 
-    \axi_awaddr[2]_i_1 
-       (.I0(s_axi_awaddr[0]),
-        .I1(s_axi_wvalid),
-        .I2(s_axi_awready),
-        .I3(aw_en_reg_n_0),
-        .I4(s_axi_awvalid),
-        .I5(\axi_awaddr_reg_n_0_[2] ),
-        .O(\axi_awaddr[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFBFFFFFF08000000)) 
-    \axi_awaddr[3]_i_1 
-       (.I0(s_axi_awaddr[1]),
-        .I1(s_axi_wvalid),
-        .I2(s_axi_awready),
-        .I3(aw_en_reg_n_0),
-        .I4(s_axi_awvalid),
-        .I5(\axi_awaddr_reg_n_0_[3] ),
-        .O(\axi_awaddr[3]_i_1_n_0 ));
+  FDRE \axi_awaddr_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(axi_awready0),
+        .D(s_axi_awaddr[0]),
+        .Q(\axi_awaddr_reg_n_0_[0] ),
+        .R(clear));
+  FDRE \axi_awaddr_reg[1] 
+       (.C(s_axi_aclk),
+        .CE(axi_awready0),
+        .D(s_axi_awaddr[1]),
+        .Q(\axi_awaddr_reg_n_0_[1] ),
+        .R(clear));
   FDRE \axi_awaddr_reg[2] 
        (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\axi_awaddr[2]_i_1_n_0 ),
-        .Q(\axi_awaddr_reg_n_0_[2] ),
+        .CE(axi_awready0),
+        .D(s_axi_awaddr[2]),
+        .Q(p_3_in),
         .R(clear));
   FDRE \axi_awaddr_reg[3] 
        (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\axi_awaddr[3]_i_1_n_0 ),
+        .CE(axi_awready0),
+        .D(s_axi_awaddr[3]),
         .Q(\axi_awaddr_reg_n_0_[3] ),
         .R(clear));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     axi_awready_i_1
@@ -751,7 +796,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I2(slv_reg3[0]),
         .I3(axi_araddr[2]),
         .O(reg_data_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[10]_i_1 
@@ -759,7 +804,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[10]),
         .O(reg_data_out[10]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[11]_i_1 
@@ -767,7 +812,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[11]),
         .O(reg_data_out[11]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[12]_i_1 
@@ -775,7 +820,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[12]),
         .O(reg_data_out[12]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[13]_i_1 
@@ -783,7 +828,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[13]),
         .O(reg_data_out[13]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[14]_i_1 
@@ -791,7 +836,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[14]),
         .O(reg_data_out[14]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[15]_i_1 
@@ -799,7 +844,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[15]),
         .O(reg_data_out[15]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[16]_i_1 
@@ -807,7 +852,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[16]),
         .O(reg_data_out[16]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[17]_i_1 
@@ -815,7 +860,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[17]),
         .O(reg_data_out[17]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[18]_i_1 
@@ -823,7 +868,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[18]),
         .O(reg_data_out[18]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[19]_i_1 
@@ -839,7 +884,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(slv_reg3[1]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[20]_i_1 
@@ -847,7 +892,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[20]),
         .O(reg_data_out[20]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[21]_i_1 
@@ -855,7 +900,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[21]),
         .O(reg_data_out[21]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[22]_i_1 
@@ -863,7 +908,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[22]),
         .O(reg_data_out[22]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[23]_i_1 
@@ -871,7 +916,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[23]),
         .O(reg_data_out[23]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[24]_i_1 
@@ -879,7 +924,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[24]),
         .O(reg_data_out[24]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[25]_i_1 
@@ -887,7 +932,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[25]),
         .O(reg_data_out[25]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[26]_i_1 
@@ -895,7 +940,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[26]),
         .O(reg_data_out[26]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[27]_i_1 
@@ -903,7 +948,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[27]),
         .O(reg_data_out[27]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[28]_i_1 
@@ -911,7 +956,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[28]),
         .O(reg_data_out[28]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[29]_i_1 
@@ -919,7 +964,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[29]),
         .O(reg_data_out[29]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hA2)) 
     \axi_rdata[2]_i_1 
@@ -927,7 +972,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[2]),
         .O(reg_data_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[30]_i_1 
@@ -935,7 +980,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[30]),
         .O(reg_data_out[30]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[31]_i_1 
@@ -943,7 +988,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[31]),
         .O(reg_data_out[31]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hD5)) 
     \axi_rdata[3]_i_1 
@@ -959,7 +1004,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(slv_reg3[4]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hD5)) 
     \axi_rdata[5]_i_1 
@@ -967,7 +1012,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(slv_reg3[5]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hD5)) 
     \axi_rdata[6]_i_1 
@@ -975,7 +1020,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(slv_reg3[6]),
         .I2(axi_araddr[3]),
         .O(reg_data_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hA2)) 
     \axi_rdata[7]_i_1 
@@ -983,7 +1028,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[7]),
         .O(reg_data_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[8]_i_1 
@@ -991,7 +1036,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .I1(axi_araddr[2]),
         .I2(slv_reg3[8]),
         .O(reg_data_out[8]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \axi_rdata[9]_i_1 
@@ -1206,7 +1251,6 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s_axi_rvalid),
         .R(clear));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     axi_wready_i_1
@@ -1226,7 +1270,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
     \slv_reg3[15]_i_1 
        (.I0(slv_reg_wren__0),
         .I1(s_axi_wstrb[1]),
-        .I2(\axi_awaddr_reg_n_0_[2] ),
+        .I2(p_3_in),
         .I3(\axi_awaddr_reg_n_0_[3] ),
         .O(p_1_in[15]));
   LUT4 #(
@@ -1234,7 +1278,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
     \slv_reg3[23]_i_1 
        (.I0(slv_reg_wren__0),
         .I1(s_axi_wstrb[2]),
-        .I2(\axi_awaddr_reg_n_0_[2] ),
+        .I2(p_3_in),
         .I3(\axi_awaddr_reg_n_0_[3] ),
         .O(p_1_in[23]));
   LUT4 #(
@@ -1242,28 +1286,20 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
     \slv_reg3[31]_i_1 
        (.I0(slv_reg_wren__0),
         .I1(s_axi_wstrb[3]),
-        .I2(\axi_awaddr_reg_n_0_[2] ),
+        .I2(p_3_in),
         .I3(\axi_awaddr_reg_n_0_[3] ),
         .O(p_1_in[31]));
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \slv_reg3[31]_i_2 
-       (.I0(s_axi_wready),
-        .I1(s_axi_awready),
-        .I2(s_axi_awvalid),
-        .I3(s_axi_wvalid),
-        .O(slv_reg_wren__0));
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg3[7]_i_1 
        (.I0(slv_reg_wren__0),
         .I1(s_axi_wstrb[0]),
-        .I2(\axi_awaddr_reg_n_0_[2] ),
+        .I2(p_3_in),
         .I3(\axi_awaddr_reg_n_0_[3] ),
-        .O(p_1_in[7]));
+        .O(p_1_in[0]));
   FDRE \slv_reg3_reg[0] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[0]),
         .Q(slv_reg3[0]),
         .R(clear));
@@ -1329,7 +1365,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .R(clear));
   FDRE \slv_reg3_reg[1] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[1]),
         .Q(slv_reg3[1]),
         .R(clear));
@@ -1395,7 +1431,7 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .R(clear));
   FDRE \slv_reg3_reg[2] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[2]),
         .Q(slv_reg3[2]),
         .R(clear));
@@ -1413,31 +1449,31 @@ module system_san_cnt_0_0_san_cnt_v1_0_S_AXI
         .R(clear));
   FDRE \slv_reg3_reg[3] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[3]),
         .Q(slv_reg3[3]),
         .R(clear));
   FDRE \slv_reg3_reg[4] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[4]),
         .Q(slv_reg3[4]),
         .R(clear));
   FDRE \slv_reg3_reg[5] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[5]),
         .Q(slv_reg3[5]),
         .R(clear));
   FDRE \slv_reg3_reg[6] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[6]),
         .Q(slv_reg3[6]),
         .R(clear));
   FDRE \slv_reg3_reg[7] 
        (.C(s_axi_aclk),
-        .CE(p_1_in[7]),
+        .CE(p_1_in[0]),
         .D(s_axi_wdata[7]),
         .Q(slv_reg3[7]),
         .R(clear));

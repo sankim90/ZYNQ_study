@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:san_cnt:1.0
-// IP Revision: 4
+// IP Revision: 6
 
 (* X_CORE_INFO = "san_cnt_v1_0,Vivado 2018.1" *)
 (* CHECK_LICENSE_TYPE = "system_san_cnt_0_0,san_cnt_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "system_san_cnt_0_0,san_cnt_v1_0,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=san_cnt,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,COUNT_DEPTH=8,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=4,C_S_AXI_INTR_DATA_WIDTH=32,C_S_AXI_INTR_ADDR_WIDTH=5,C_NUM_OF_INTR=1,C_INTR_SENSITIVITY=0xFFFFFFFF,C_INTR_ACTIVE_STATE=0xFFFFFFFF,C_IRQ_SENSITIVITY=1,C_IRQ_ACTIVE_STATE=1}" *)
+(* CORE_GENERATION_INFO = "system_san_cnt_0_0,san_cnt_v1_0,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=san_cnt,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,COUNT_DEPTH=8,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=4,C_S_AXI_INTR_DATA_WIDTH=32,C_S_AXI_INTR_ADDR_WIDTH=5,C_NUM_OF_INTR=1,C_INTR_SENSITIVITY=0xFFFFFFFF,C_INTR_ACTIVE_STATE=0xFFFFFFFF,C_IRQ_SENSITIVITY=1,C_IRQ_ACTIVE_STATE=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_san_cnt_0_0 (
   EXT_IRQ,

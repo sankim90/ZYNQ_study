@@ -51,12 +51,59 @@
 #include "xgpio.h"
 #include "led_ip.h"
 #include "san_cnt.h"
+#include "xscugic.h"
+
+XScuGic InterruptController;
+static XScuGic_Config *GicConfig;
+
+//void ExtIrq_Handler(void *InstancePtr)
+void ExtIrq_Handler(int test)
+{
+	test = 0;
+	xil_printf("SAN) ExtIrq_Handler %d\r\n", test);
+}
+
+int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
+{
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+	return XST_SUCCESS;
+}
+
+int interrupt_init()
+{
+	int Status;
+
+	GicConfig = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+	if (NULL == GicConfig) {
+		return XST_FAILURE;
+	}
+	Status = XScuGic_CfgInitialize(&InterruptController, GicConfig, GicConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Status = SetUpInterruptSystem(&InterruptController);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Status = XScuGic_Connect(&InterruptController, XPAR_FABRIC_SAN_CNT_0_EXT_IRQ_INTR, (Xil_ExceptionHandler)ExtIrq_Handler, (void *)NULL);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XScuGic_Enable(&InterruptController, XPAR_FABRIC_SAN_CNT_0_EXT_IRQ_INTR);
+
+	return XST_SUCCESS;
+}
 
 int main()
 {
 	XGpio dip, push;
 	unsigned int rst = 0;
-
+	int input = 10;
+	interrupt_init();
 	xil_printf("SAN IP test start!\n\r");
 	xil_printf("Before rst value is %d\n\r", rst);
 //	while(1)
@@ -66,6 +113,9 @@ int main()
 			rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i*4);
 			xil_printf("After rst %d value is %d\n\r", i, rst);
 		}
+		SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 12, input);
 	}
+
+	xil_printf("SAN IP test End!\n\r");
     return 0;
 }
