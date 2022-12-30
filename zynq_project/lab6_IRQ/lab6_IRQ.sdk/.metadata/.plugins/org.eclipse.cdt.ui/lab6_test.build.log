@@ -1,8 +1,30 @@
-13:54:32 **** Incremental Build of configuration Debug for project lab6_test ****
+22:29:26 **** Auto Build of configuration Debug for project lab6_test ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: `main-build'를 위해 할 일이 없습니다
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:102:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:102:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25832	   2720	  22600	  51152	   c7d0	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
 
-13:54:33 Build Finished (took 474ms)
+22:29:28 Build Finished (took 1s.421ms)
 

@@ -101,29 +101,24 @@ int main()
 {
 	XGpio dip, push;
 	unsigned int rst = 0;
-	int input = 1;
+	int input = 0;
 	interrupt_init();
 	xil_printf("SAN IP test start!\n\r");
-	xil_printf("Before rst value is %d\n\r", rst);
 //	while(1)
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i*4);
+			rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i*4);  //Remain Previous value, need to check it
 			xil_printf("After rst %d value is %d\n\r", i, rst);
 		}
-		SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 12, input);
+		SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0, input);
 	}
 
-	for (int i = 0; i < 4; i++)
-			{
-				rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i*4);
-				xil_printf("2 After rst %d value is %d\n\r", i, rst);
-			}
 	for (int i = 0; i < 20000; i++);
-	rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 12);
+	rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0);
 
-	SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 12, 0);
+	input = 0;
+	SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0, input);
 
 	xil_printf("SAN IP test End! rst value is %d\n\r", rst);
     return 0;

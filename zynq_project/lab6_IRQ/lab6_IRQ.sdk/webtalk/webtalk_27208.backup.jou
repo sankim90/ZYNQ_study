@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# 
+# Start of session at: Fri Dec 30 20:43:40 2022
+# Process ID: 27208
+# Current directory: D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.sdk/webtalk/webtalk.log
+# Journal file: D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
