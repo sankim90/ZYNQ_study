@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
--- Date        : Thu Dec 29 22:41:08 2022
--- Host        : San-desktop running 64-bit major release  (build 9200)
+-- Date        : Fri Dec 30 12:23:53 2022
+-- Host        : DESKTOP-D5JKCJU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_san_cnt_0_0/system_san_cnt_0_0_sim_netlist.vhdl
 -- Design      : system_san_cnt_0_0
@@ -16,222 +16,31 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_san_cnt_0_0_san_cnt is
   port (
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     EXT_IRQ : out STD_LOGIC;
+    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     \slv_reg_wren__0\ : out STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s_axi_aresetn : in STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     axi_wready_reg : in STD_LOGIC;
     axi_awready_reg : in STD_LOGIC;
     s_axi_awvalid : in STD_LOGIC;
-    s_axi_wvalid : in STD_LOGIC;
-    \axi_awaddr_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axi_aresetn : in STD_LOGIC
+    s_axi_wvalid : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_san_cnt_0_0_san_cnt : entity is "san_cnt";
 end system_san_cnt_0_0_san_cnt;
 
 architecture STRUCTURE of system_san_cnt_0_0_san_cnt is
-  signal \COUNT_SAN[7]_i_2_n_0\ : STD_LOGIC;
-  signal \COUNT_SAN_reg__0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^ext_irq\ : STD_LOGIC;
-  signal \^ext_irq_reg\ : STD_LOGIC;
-  signal EXT_IRQ_REG_i_1_n_0 : STD_LOGIC;
   signal EXT_IRQ_i_2_n_0 : STD_LOGIC;
-  signal EXT_IRQ_i_4_n_0 : STD_LOGIC;
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal p_0_in : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^slv_reg_wren__0\ : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \COUNT_SAN[1]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \COUNT_SAN[2]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \COUNT_SAN[3]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \COUNT_SAN[4]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \COUNT_SAN[7]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of EXT_IRQ_REG_i_1 : label is "soft_lutpair6";
 begin
   EXT_IRQ <= \^ext_irq\;
   SR(0) <= \^sr\(0);
   \slv_reg_wren__0\ <= \^slv_reg_wren__0\;
-\COUNT_SAN[0]_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(0),
-      O => p_0_in(0)
-    );
-\COUNT_SAN[1]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(0),
-      I1 => \COUNT_SAN_reg__0\(1),
-      O => p_0_in(1)
-    );
-\COUNT_SAN[2]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(1),
-      I1 => \COUNT_SAN_reg__0\(0),
-      I2 => \COUNT_SAN_reg__0\(2),
-      O => p_0_in(2)
-    );
-\COUNT_SAN[3]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(2),
-      I1 => \COUNT_SAN_reg__0\(0),
-      I2 => \COUNT_SAN_reg__0\(1),
-      I3 => \COUNT_SAN_reg__0\(3),
-      O => p_0_in(3)
-    );
-\COUNT_SAN[4]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"7FFF8000"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(3),
-      I1 => \COUNT_SAN_reg__0\(1),
-      I2 => \COUNT_SAN_reg__0\(0),
-      I3 => \COUNT_SAN_reg__0\(2),
-      I4 => \COUNT_SAN_reg__0\(4),
-      O => p_0_in(4)
-    );
-\COUNT_SAN[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFF80000000"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(4),
-      I1 => \COUNT_SAN_reg__0\(2),
-      I2 => \COUNT_SAN_reg__0\(0),
-      I3 => \COUNT_SAN_reg__0\(1),
-      I4 => \COUNT_SAN_reg__0\(3),
-      I5 => \COUNT_SAN_reg__0\(5),
-      O => p_0_in(5)
-    );
-\COUNT_SAN[6]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => \COUNT_SAN[7]_i_2_n_0\,
-      I1 => \COUNT_SAN_reg__0\(6),
-      O => p_0_in(6)
-    );
-\COUNT_SAN[7]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D2"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(6),
-      I1 => \COUNT_SAN[7]_i_2_n_0\,
-      I2 => \COUNT_SAN_reg__0\(7),
-      O => p_0_in(7)
-    );
-\COUNT_SAN[7]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \COUNT_SAN_reg__0\(4),
-      I1 => \COUNT_SAN_reg__0\(2),
-      I2 => \COUNT_SAN_reg__0\(0),
-      I3 => \COUNT_SAN_reg__0\(1),
-      I4 => \COUNT_SAN_reg__0\(3),
-      I5 => \COUNT_SAN_reg__0\(5),
-      O => \COUNT_SAN[7]_i_2_n_0\
-    );
-\COUNT_SAN_reg[0]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(0),
-      Q => \COUNT_SAN_reg__0\(0),
-      R => \^sr\(0)
-    );
-\COUNT_SAN_reg[1]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(1),
-      Q => \COUNT_SAN_reg__0\(1),
-      R => \^sr\(0)
-    );
-\COUNT_SAN_reg[2]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(2),
-      Q => \COUNT_SAN_reg__0\(2),
-      R => \^sr\(0)
-    );
-\COUNT_SAN_reg[3]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(3),
-      Q => \COUNT_SAN_reg__0\(3),
-      R => \^sr\(0)
-    );
-\COUNT_SAN_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(4),
-      Q => \COUNT_SAN_reg__0\(4),
-      R => \^sr\(0)
-    );
-\COUNT_SAN_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(5),
-      Q => \COUNT_SAN_reg__0\(5),
-      R => \^sr\(0)
-    );
-\COUNT_SAN_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(6),
-      Q => \COUNT_SAN_reg__0\(6),
-      R => \^sr\(0)
-    );
-\COUNT_SAN_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in(7),
-      Q => \COUNT_SAN_reg__0\(7),
-      R => \^sr\(0)
-    );
-EXT_IRQ_REG_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF40"
-    )
-        port map (
-      I0 => \COUNT_SAN[7]_i_2_n_0\,
-      I1 => \COUNT_SAN_reg__0\(6),
-      I2 => \COUNT_SAN_reg__0\(7),
-      I3 => \^ext_irq_reg\,
-      O => EXT_IRQ_REG_i_1_n_0
-    );
-EXT_IRQ_REG_reg: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => EXT_IRQ_REG_i_1_n_0,
-      Q => \^ext_irq_reg\,
-      R => \^sr\(0)
-    );
 EXT_IRQ_i_1: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -240,15 +49,17 @@ EXT_IRQ_i_1: unisim.vcomponents.LUT1
       I0 => s_axi_aresetn,
       O => \^sr\(0)
     );
-EXT_IRQ_i_2: unisim.vcomponents.LUT4
+EXT_IRQ_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BF80"
+      INIT => X"FFFFBFFF00008000"
     )
         port map (
-      I0 => Q(0),
+      I0 => s_axi_wdata(0),
       I1 => \^slv_reg_wren__0\,
-      I2 => EXT_IRQ_i_4_n_0,
-      I3 => \^ext_irq\,
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(2),
+      I5 => \^ext_irq\,
       O => EXT_IRQ_i_2_n_0
     );
 EXT_IRQ_i_3: unisim.vcomponents.LUT4
@@ -261,17 +72,6 @@ EXT_IRQ_i_3: unisim.vcomponents.LUT4
       I2 => s_axi_awvalid,
       I3 => s_axi_wvalid,
       O => \^slv_reg_wren__0\
-    );
-EXT_IRQ_i_4: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0080"
-    )
-        port map (
-      I0 => \^ext_irq_reg\,
-      I1 => \axi_awaddr_reg[2]\(1),
-      I2 => \axi_awaddr_reg[2]\(0),
-      I3 => \axi_awaddr_reg[2]\(2),
-      O => EXT_IRQ_i_4_n_0
     );
 EXT_IRQ_reg: unisim.vcomponents.FDRE
      port map (
@@ -976,16 +776,16 @@ entity system_san_cnt_0_0_san_cnt_v1_0_S_AXI is
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_aresetn : in STD_LOGIC
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_san_cnt_0_0_san_cnt_v1_0_S_AXI : entity is "san_cnt_v1_0_S_AXI";
@@ -1006,8 +806,8 @@ architecture STRUCTURE of system_san_cnt_0_0_san_cnt_v1_0_S_AXI is
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
-  signal clear : STD_LOGIC;
-  signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal p_0_in : STD_LOGIC;
+  signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 7 );
   signal p_3_in : STD_LOGIC_VECTOR ( 0 to 0 );
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s_axi_arready\ : STD_LOGIC;
@@ -1019,40 +819,40 @@ architecture STRUCTURE of system_san_cnt_0_0_san_cnt_v1_0_S_AXI is
   signal \slv_reg_rden__0\ : STD_LOGIC;
   signal \slv_reg_wren__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \axi_rdata[0]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \axi_rdata[10]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \axi_rdata[11]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \axi_rdata[12]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \axi_rdata[13]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \axi_rdata[14]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \axi_rdata[15]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \axi_rdata[16]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \axi_rdata[17]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \axi_rdata[18]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \axi_rdata[19]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \axi_rdata[1]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \axi_rdata[20]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \axi_rdata[21]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \axi_rdata[22]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \axi_rdata[23]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \axi_rdata[24]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \axi_rdata[25]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \axi_rdata[26]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \axi_rdata[27]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \axi_rdata[28]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \axi_rdata[29]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \axi_rdata[2]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \axi_rdata[30]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \axi_rdata[31]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \axi_rdata[3]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \axi_rdata[4]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \axi_rdata[5]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \axi_rdata[6]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \axi_rdata[7]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \axi_rdata[8]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \axi_rdata[9]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \axi_rdata[0]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \axi_rdata[10]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \axi_rdata[11]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \axi_rdata[12]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \axi_rdata[13]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \axi_rdata[14]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \axi_rdata[15]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \axi_rdata[16]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \axi_rdata[17]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \axi_rdata[18]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \axi_rdata[19]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \axi_rdata[1]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \axi_rdata[20]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \axi_rdata[21]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \axi_rdata[22]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \axi_rdata[23]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \axi_rdata[24]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \axi_rdata[25]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \axi_rdata[26]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \axi_rdata[27]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \axi_rdata[28]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \axi_rdata[29]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \axi_rdata[2]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \axi_rdata[30]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \axi_rdata[31]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \axi_rdata[3]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \axi_rdata[4]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \axi_rdata[5]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \axi_rdata[6]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \axi_rdata[7]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \axi_rdata[8]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \axi_rdata[9]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair5";
 begin
   EXT_IRQ <= \^ext_irq\;
   s_axi_arready <= \^s_axi_arready\;
@@ -1063,16 +863,16 @@ begin
 U1: entity work.system_san_cnt_0_0_san_cnt
      port map (
       EXT_IRQ => \^ext_irq\,
-      Q(0) => slv_reg3(0),
-      SR(0) => clear,
-      \axi_awaddr_reg[2]\(2) => p_3_in(0),
-      \axi_awaddr_reg[2]\(1) => \axi_awaddr_reg_n_0_[1]\,
-      \axi_awaddr_reg[2]\(0) => \axi_awaddr_reg_n_0_[0]\,
+      Q(2) => p_3_in(0),
+      Q(1) => \axi_awaddr_reg_n_0_[1]\,
+      Q(0) => \axi_awaddr_reg_n_0_[0]\,
+      SR(0) => p_0_in,
       axi_awready_reg => \^s_axi_awready\,
       axi_wready_reg => \^s_axi_wready\,
       s_axi_aclk => s_axi_aclk,
       s_axi_aresetn => s_axi_aresetn,
       s_axi_awvalid => s_axi_awvalid,
+      s_axi_wdata(0) => s_axi_wdata(0),
       s_axi_wvalid => s_axi_wvalid,
       \slv_reg_wren__0\ => \slv_reg_wren__0\
     );
@@ -1095,7 +895,7 @@ aw_en_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => aw_en_i_1_n_0,
       Q => aw_en_reg_n_0,
-      S => clear
+      S => p_0_in
     );
 \axi_araddr[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -1125,7 +925,7 @@ aw_en_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => \axi_araddr[2]_i_1_n_0\,
       Q => axi_araddr(2),
-      R => clear
+      R => p_0_in
     );
 \axi_araddr_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -1133,7 +933,7 @@ aw_en_reg: unisim.vcomponents.FDSE
       CE => '1',
       D => \axi_araddr[3]_i_1_n_0\,
       Q => axi_araddr(3),
-      R => clear
+      R => p_0_in
     );
 axi_arready_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -1150,7 +950,7 @@ axi_arready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_arready0,
       Q => \^s_axi_arready\,
-      R => clear
+      R => p_0_in
     );
 \axi_awaddr_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -1158,7 +958,7 @@ axi_arready_reg: unisim.vcomponents.FDRE
       CE => axi_awready0,
       D => s_axi_awaddr(0),
       Q => \axi_awaddr_reg_n_0_[0]\,
-      R => clear
+      R => p_0_in
     );
 \axi_awaddr_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -1166,7 +966,7 @@ axi_arready_reg: unisim.vcomponents.FDRE
       CE => axi_awready0,
       D => s_axi_awaddr(1),
       Q => \axi_awaddr_reg_n_0_[1]\,
-      R => clear
+      R => p_0_in
     );
 \axi_awaddr_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -1174,7 +974,7 @@ axi_arready_reg: unisim.vcomponents.FDRE
       CE => axi_awready0,
       D => s_axi_awaddr(2),
       Q => p_3_in(0),
-      R => clear
+      R => p_0_in
     );
 \axi_awaddr_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -1182,7 +982,7 @@ axi_arready_reg: unisim.vcomponents.FDRE
       CE => axi_awready0,
       D => s_axi_awaddr(3),
       Q => \axi_awaddr_reg_n_0_[3]\,
-      R => clear
+      R => p_0_in
     );
 axi_awready_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -1201,7 +1001,7 @@ axi_awready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_awready0,
       Q => \^s_axi_awready\,
-      R => clear
+      R => p_0_in
     );
 axi_bvalid_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -1222,7 +1022,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_bvalid_i_1_n_0,
       Q => \^s_axi_bvalid\,
-      R => clear
+      R => p_0_in
     );
 \axi_rdata[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -1551,7 +1351,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(0),
       Q => s_axi_rdata(0),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -1559,7 +1359,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(10),
       Q => s_axi_rdata(10),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -1567,7 +1367,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(11),
       Q => s_axi_rdata(11),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -1575,7 +1375,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(12),
       Q => s_axi_rdata(12),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[13]\: unisim.vcomponents.FDRE
      port map (
@@ -1583,7 +1383,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(13),
       Q => s_axi_rdata(13),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -1591,7 +1391,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(14),
       Q => s_axi_rdata(14),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -1599,7 +1399,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(15),
       Q => s_axi_rdata(15),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -1607,7 +1407,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(16),
       Q => s_axi_rdata(16),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[17]\: unisim.vcomponents.FDRE
      port map (
@@ -1615,7 +1415,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(17),
       Q => s_axi_rdata(17),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -1623,7 +1423,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(18),
       Q => s_axi_rdata(18),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -1631,7 +1431,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(19),
       Q => s_axi_rdata(19),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -1639,7 +1439,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(1),
       Q => s_axi_rdata(1),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -1647,7 +1447,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(20),
       Q => s_axi_rdata(20),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[21]\: unisim.vcomponents.FDRE
      port map (
@@ -1655,7 +1455,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(21),
       Q => s_axi_rdata(21),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -1663,7 +1463,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(22),
       Q => s_axi_rdata(22),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[23]\: unisim.vcomponents.FDRE
      port map (
@@ -1671,7 +1471,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(23),
       Q => s_axi_rdata(23),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[24]\: unisim.vcomponents.FDRE
      port map (
@@ -1679,7 +1479,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(24),
       Q => s_axi_rdata(24),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[25]\: unisim.vcomponents.FDRE
      port map (
@@ -1687,7 +1487,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(25),
       Q => s_axi_rdata(25),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[26]\: unisim.vcomponents.FDRE
      port map (
@@ -1695,7 +1495,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(26),
       Q => s_axi_rdata(26),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[27]\: unisim.vcomponents.FDRE
      port map (
@@ -1703,7 +1503,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(27),
       Q => s_axi_rdata(27),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[28]\: unisim.vcomponents.FDRE
      port map (
@@ -1711,7 +1511,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(28),
       Q => s_axi_rdata(28),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[29]\: unisim.vcomponents.FDRE
      port map (
@@ -1719,7 +1519,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(29),
       Q => s_axi_rdata(29),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -1727,7 +1527,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(2),
       Q => s_axi_rdata(2),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[30]\: unisim.vcomponents.FDRE
      port map (
@@ -1735,7 +1535,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(30),
       Q => s_axi_rdata(30),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[31]\: unisim.vcomponents.FDRE
      port map (
@@ -1743,7 +1543,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(31),
       Q => s_axi_rdata(31),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -1751,7 +1551,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(3),
       Q => s_axi_rdata(3),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -1759,7 +1559,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(4),
       Q => s_axi_rdata(4),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -1767,7 +1567,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(5),
       Q => s_axi_rdata(5),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -1775,7 +1575,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(6),
       Q => s_axi_rdata(6),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -1783,7 +1583,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(7),
       Q => s_axi_rdata(7),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -1791,7 +1591,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(8),
       Q => s_axi_rdata(8),
-      R => clear
+      R => p_0_in
     );
 \axi_rdata_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -1799,7 +1599,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       CE => \slv_reg_rden__0\,
       D => reg_data_out(9),
       Q => s_axi_rdata(9),
-      R => clear
+      R => p_0_in
     );
 axi_rvalid_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -1818,7 +1618,7 @@ axi_rvalid_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_rvalid_i_1_n_0,
       Q => \^s_axi_rvalid\,
-      R => clear
+      R => p_0_in
     );
 axi_wready_i_1: unisim.vcomponents.LUT4
     generic map(
@@ -1837,7 +1637,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => axi_wready0,
       Q => \^s_axi_wready\,
-      R => clear
+      R => p_0_in
     );
 \slv_reg3[15]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -1881,15 +1681,15 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I1 => s_axi_wstrb(0),
       I2 => p_3_in(0),
       I3 => \axi_awaddr_reg_n_0_[3]\,
-      O => p_1_in(0)
+      O => p_1_in(7)
     );
 \slv_reg3_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(0),
       Q => slv_reg3(0),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -1897,7 +1697,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(10),
       Q => slv_reg3(10),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -1905,7 +1705,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(11),
       Q => slv_reg3(11),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -1913,7 +1713,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(12),
       Q => slv_reg3(12),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[13]\: unisim.vcomponents.FDRE
      port map (
@@ -1921,7 +1721,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(13),
       Q => slv_reg3(13),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -1929,7 +1729,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(14),
       Q => slv_reg3(14),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -1937,7 +1737,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(15),
       Q => slv_reg3(15),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -1945,7 +1745,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(16),
       Q => slv_reg3(16),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[17]\: unisim.vcomponents.FDRE
      port map (
@@ -1953,7 +1753,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(17),
       Q => slv_reg3(17),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -1961,7 +1761,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(18),
       Q => slv_reg3(18),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -1969,15 +1769,15 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(19),
       Q => slv_reg3(19),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(1),
       Q => slv_reg3(1),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -1985,7 +1785,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(20),
       Q => slv_reg3(20),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[21]\: unisim.vcomponents.FDRE
      port map (
@@ -1993,7 +1793,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(21),
       Q => slv_reg3(21),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -2001,7 +1801,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(22),
       Q => slv_reg3(22),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[23]\: unisim.vcomponents.FDRE
      port map (
@@ -2009,7 +1809,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(23),
       D => s_axi_wdata(23),
       Q => slv_reg3(23),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[24]\: unisim.vcomponents.FDRE
      port map (
@@ -2017,7 +1817,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(24),
       Q => slv_reg3(24),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[25]\: unisim.vcomponents.FDRE
      port map (
@@ -2025,7 +1825,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(25),
       Q => slv_reg3(25),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[26]\: unisim.vcomponents.FDRE
      port map (
@@ -2033,7 +1833,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(26),
       Q => slv_reg3(26),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[27]\: unisim.vcomponents.FDRE
      port map (
@@ -2041,7 +1841,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(27),
       Q => slv_reg3(27),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[28]\: unisim.vcomponents.FDRE
      port map (
@@ -2049,7 +1849,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(28),
       Q => slv_reg3(28),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[29]\: unisim.vcomponents.FDRE
      port map (
@@ -2057,15 +1857,15 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(29),
       Q => slv_reg3(29),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(2),
       Q => slv_reg3(2),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[30]\: unisim.vcomponents.FDRE
      port map (
@@ -2073,7 +1873,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(30),
       Q => slv_reg3(30),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[31]\: unisim.vcomponents.FDRE
      port map (
@@ -2081,47 +1881,47 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(31),
       D => s_axi_wdata(31),
       Q => slv_reg3(31),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(3),
       Q => slv_reg3(3),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(4),
       Q => slv_reg3(4),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(5),
       Q => slv_reg3(5),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(6),
       Q => slv_reg3(6),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
-      CE => p_1_in(0),
+      CE => p_1_in(7),
       D => s_axi_wdata(7),
       Q => slv_reg3(7),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -2129,7 +1929,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(8),
       Q => slv_reg3(8),
-      R => clear
+      R => p_0_in
     );
 \slv_reg3_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -2137,7 +1937,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       CE => p_1_in(15),
       D => s_axi_wdata(9),
       Q => slv_reg3(9),
-      R => clear
+      R => p_0_in
     );
 slv_reg_rden: unisim.vcomponents.LUT3
     generic map(
@@ -2171,11 +1971,11 @@ entity system_san_cnt_0_0_san_cnt_v1_0 is
     s_axi_bvalid : out STD_LOGIC;
     s_axi_intr_bvalid : out STD_LOGIC;
     s_axi_intr_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_arvalid : in STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_intr_aclk : in STD_LOGIC;
     s_axi_intr_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_intr_awvalid : in STD_LOGIC;

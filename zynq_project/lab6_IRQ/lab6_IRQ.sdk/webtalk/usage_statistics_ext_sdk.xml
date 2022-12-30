@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_sdk.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Dec 29 21:09:04 2022'>
+<webTalkData  fileName='usage_statistics_ext_sdk.xml'  majorVersion='1' minorVersion='0' timeStamp='Fri Dec 30 14:04:59 2022'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="false" description="" />
   <keyValuePair key="build_version" value="2018.1" description="" />
-  <keyValuePair key="date_generated" value="2022-12-29 21:09:00" description="" />
+  <keyValuePair key="date_generated" value="2022-12-30 14:04:41" description="" />
   <keyValuePair key="os_platform" value="amd64" description="" />
   <keyValuePair key="product_version" value="SDK v2018.1" description="" />
-  <keyValuePair key="project_id" value="2018.1_1" description="" />
-  <keyValuePair key="project_iteration" value="1" description="" />
-  <keyValuePair key="random_id" value="6guclmsr52aus57jm1rn73ppiq" description="" />
-  <keyValuePair key="registration_id" value="6guclmsr52aus57jm1rn73ppiq" description="" />
+  <keyValuePair key="project_id" value="2018.1_6" description="" />
+  <keyValuePair key="project_iteration" value="6" description="" />
+  <keyValuePair key="random_id" value="29m3s3i9dqveq5tv1e8mb8rdas" description="" />
+  <keyValuePair key="registration_id" value="29m3s3i9dqveq5tv1e8mb8rdas" description="" />
   <keyValuePair key="route_design" value="NA" description="" />
   <keyValuePair key="target_device" value="NA" description="" />
   <keyValuePair key="target_family" value="NA" description="" />
@@ -19,25 +19,25 @@
   <keyValuePair key="tool_flow" value="SDK" description="" />
  </section>
  <section name="user_environment" level="1" order="2" description="">
-  <keyValuePair key="cpu_name" value="AMD Ryzen 5 5600X 6-Core Processor             " description="" />
-  <keyValuePair key="cpu_speed" value="3693 MHz" description="" />
+  <keyValuePair key="cpu_name" value="Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz" description="" />
+  <keyValuePair key="cpu_speed" value="1800 MHz" description="" />
   <keyValuePair key="os_name" value="Microsoft Windows 8 or later , 64-bit" description="" />
   <keyValuePair key="os_release" value="major release  (build 9200)" description="" />
-  <keyValuePair key="system_ram" value="17.093 GB" description="" />
-  <keyValuePair key="total_processors" value="2" description="" />
+  <keyValuePair key="system_ram" value="8.374 GB" description="" />
+  <keyValuePair key="total_processors" value="1" description="" />
  </section>
  <section name="sdk" level="1" order="3" description="">
-  <section name="bsp/1672315740903" level="2" order="1" description="">
+  <section name="bsp/1672376681412" level="2" order="1" description="">
    <keyValuePair key="bootgencount" value="0" description="" />
    <keyValuePair key="crosstriggcount" value="0" description="" />
-   <keyValuePair key="debugcount" value="0" description="" />
+   <keyValuePair key="debugcount" value="3" description="" />
    <keyValuePair key="flashcount" value="0" description="" />
    <keyValuePair key="perfcount" value="0" description="" />
    <keyValuePair key="qemudebugcount" value="0" description="" />
    <keyValuePair key="recordtype" value="ToolUsage" description="" />
    <keyValuePair key="uid" value="NA" description="" />
   </section>
-  <section name="hardware/1672315229158" level="2" order="2" description="">
+  <section name="hardware/1672374294000" level="2" order="2" description="">
    <keyValuePair key="apptemplate" value="NA" description="" />
    <keyValuePair key="arch" value="zynq" description="" />
    <keyValuePair key="device" value="7z020" description="" />
@@ -47,7 +47,7 @@
    <keyValuePair key="os" value="NA" description="" />
    <keyValuePair key="processors" value="2" description="" />
    <keyValuePair key="recordtype" value="HWCreation" description="" />
-   <keyValuePair key="uid" value="1672315229158" description="" />
+   <keyValuePair key="uid" value="1672374294000" description="" />
    <keyValuePair key="vivadoversion" value="2018.1" description="" />
   </section>
  </section>

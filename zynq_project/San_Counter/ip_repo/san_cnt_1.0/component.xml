@@ -554,7 +554,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>15710151</spirit:value>
+            <spirit:value>28029a53</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -570,7 +570,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>15710151</spirit:value>
+            <spirit:value>28029a53</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1542,17 +1542,17 @@
         <xilinx:taxonomy>/Basic_Elements</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>san_cnt_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>6</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-12-29T13:40:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-12-30T03:19:49Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="xilinx.com:user:san_cnt:1.0_ARCHIVE_LOCATION">d:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="xilinx.com:user:san_cnt:1.0_ARCHIVE_LOCATION">d:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="ae234edd"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="0e00fd21"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d224f52b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d2413b22"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="24bd41e2"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="9a8561a8"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="b325f201"/>

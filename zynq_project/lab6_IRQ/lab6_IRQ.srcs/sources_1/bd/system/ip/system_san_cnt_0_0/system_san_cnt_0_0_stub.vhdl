@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
--- Date        : Thu Dec 29 22:41:08 2022
--- Host        : San-desktop running 64-bit major release  (build 9200)
+-- Date        : Fri Dec 30 12:23:53 2022
+-- Host        : DESKTOP-D5JKCJU running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_san_cnt_0_0/system_san_cnt_0_0_stub.vhdl
 -- Design      : system_san_cnt_0_0
