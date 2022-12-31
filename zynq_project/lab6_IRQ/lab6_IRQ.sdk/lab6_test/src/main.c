@@ -51,6 +51,8 @@
 #include "led_ip.h"
 #include "san_cnt.h"
 #include "xscugic.h"
+#include "lab6_def.h"
+#include "lab6_process.h"
 
 XScuGic InterruptController;
 static XScuGic_Config *GicConfig;
@@ -67,6 +69,15 @@ int SetUpInterruptSystem(XScuGic *XScuGicInstancePtr)
 	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, XScuGicInstancePtr);
 	Xil_ExceptionEnable();
 	return XST_SUCCESS;
+}
+
+void Cnt_reg_init(int init_val)
+{
+
+	for(int i = 0; i < SLG_REG_NUM; i++)
+		SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i * ARM_32BIT_WORD, init_val);
+
+	xil_printf("SAN IP REG Init done!\n\r");
 }
 
 int interrupt_init()
@@ -101,25 +112,23 @@ int main()
 {
 	XGpio dip, push;
 	unsigned int rst = 0;
-	int input = 0;
 	interrupt_init();
 	xil_printf("SAN IP test start!\n\r");
+	Cnt_reg_init(0);
 //	while(1)
 	{
-		for (int i = 0; i < 4; i++)
+		for (int i = 0; i < SLG_REG_NUM; i++)
 		{
-			rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i*4);  //Remain Previous value, need to check it
+			rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, i * ARM_32BIT_WORD);  //Remain Previous value, need to check it
 			xil_printf("After rst %d value is %d\n\r", i, rst);
 		}
-		SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0, input);
+		SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0, 1);
 	}
 
-	for (int i = 0; i < 20000; i++);
-	rst = SAN_CNT_mReadReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0);
+	sleep(3);
 
-	input = 0;
-	SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0, input);
+	SAN_CNT_mWriteReg(XPAR_SAN_CNT_0_S_AXI_BASEADDR, 0, 0);
 
-	xil_printf("SAN IP test End! rst value is %d\n\r", rst);
+	xil_printf("SAN IP test End!\n\r");
     return 0;
 }

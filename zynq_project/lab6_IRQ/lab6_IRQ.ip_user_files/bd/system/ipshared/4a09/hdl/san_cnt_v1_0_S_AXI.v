@@ -402,7 +402,7 @@
 	// Add user logic here
     assign slv_reg1 = EXT_IRQ;
 	assign slv_reg2 = slv_reg_wren;
-	assign slv_reg3 = axi_awaddr;
+	assign slv_reg3 = axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB];
     
     san_cnt # ( .COUNT_DEPTH(COUNT_DEPTH))    
     U1( .S_AXI_ACLK(S_AXI_ACLK), .slv_reg_wren(slv_reg_wren), .axi_awaddr(axi_awaddr),

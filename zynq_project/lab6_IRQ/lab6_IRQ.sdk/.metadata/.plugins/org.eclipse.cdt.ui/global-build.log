@@ -2990,3 +2990,767 @@ arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
   25832	   2720	  22600	  51152	   c7d0	lab6_test.elf
 'Finished building: lab6_test.elf.size'
 ' '
+22:53:59 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+22:54:06 **** Clean-only build of configuration Debug for project lab6_test ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  lab6_test.elf.size  lab6_test.elf
+' '
+22:54:06 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:102:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:102:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25832	   2720	  22600	  51152	   c7d0	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+22:54:52 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+22:55:27 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+22:56:24 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+22:57:29 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+22:58:15 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+22:58:49 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'Cnt_reg_init':
+../src/main.c:75:21: error: 'SLG_REG_NUM' undeclared (first use in this function)
+  for(int i = 0; i < SLG_REG_NUM; i++)
+                     ^~~~~~~~~~~
+../src/main.c:75:21: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:108:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:108:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+make: *** [src/main.o] 오류 1
+22:59:22 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:110:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:110:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25896	   2720	  22600	  51216	   c810	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+22:59:53 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:110:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:110:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25896	   2720	  22600	  51216	   c810	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:00:02 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:110:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:110:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25896	   2720	  22600	  51216	   c810	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:00:12 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:111:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:111:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25896	   2720	  22600	  51216	   c810	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:01:25 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25980	   2720	  22600	  51300	   c864	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:01:32 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25984	   2720	  22600	  51304	   c868	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:01:36 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25984	   2720	  22600	  51304	   c868	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:01:50 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25984	   2720	  22600	  51304	   c868	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:02:17 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25984	   2720	  22600	  51304	   c868	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:03:08 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:131:2: error: 'input' undeclared (first use in this function); did you mean 'int'?
+  input = 0;
+  ^~~~~
+  int
+../src/main.c:131:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+make: *** [src/main.o] 오류 1
+23:03:11 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:131:2: error: 'input' undeclared (first use in this function); did you mean 'int'?
+  input = 0;
+  ^~~~~
+  int
+../src/main.c:131:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+make: *** [src/main.o] 오류 1
+23:03:17 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25920	   2720	  22600	  51240	   c828	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:03:43 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25904	   2720	  22600	  51224	   c818	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:07:18 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(3);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:09:06 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+23:09:34 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(3);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+23:09:39 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+00:13:54 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(3);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+00:14:18 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(3);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+00:14:36 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(3);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+00:15:12 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+00:16:21 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(5);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+00:17:20 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+00:17:54 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+00:18:27 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+00:19:32 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(10);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+00:19:34 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(10);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+00:19:39 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+00:19:57 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25840	   2720	  22600	  51160	   c7d8	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '
+00:20:00 **** Incremental Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: `main-build'를 위해 할 일이 없습니다
+00:21:15 **** Auto Build of configuration Debug for project lab6_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lab6_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:128:2: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+  sleep(3);
+  ^~~~~
+  strsep
+../src/main.c:113:13: warning: unused variable 'push' [-Wunused-variable]
+  XGpio dip, push;
+             ^~~~
+../src/main.c:113:8: warning: unused variable 'dip' [-Wunused-variable]
+  XGpio dip, push;
+        ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab6_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lab6_test_bsp/ps7_cortexa9_0/lib -o "lab6_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab6_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab6_test.elf  |tee "lab6_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26032	   2720	  22600	  51352	   c898	lab6_test.elf
+'Finished building: lab6_test.elf.size'
+' '

@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25988 
+INFO: Helper process launched with PID 23516 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 353.012 ; gain = 100.145
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 353.211 ; gain = 100.438
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'san_cnt_v1_0' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0.v:4]
 	Parameter COUNT_DEPTH bound to: 8 - type: integer 
@@ -39,11 +39,10 @@ INFO: [Synth 8-226] default block is never used [D:/ZYNQ_study/zynq_project/san_
 INFO: [Synth 8-226] default block is never used [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:374]
 INFO: [Synth 8-6157] synthesizing module 'san_cnt' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:23]
 	Parameter COUNT_DEPTH bound to: 8 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element COUNT_SAN_reg was removed.  [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:38]
-WARNING: [Synth 8-6014] Unused sequential element EXT_IRQ_REG_reg was removed.  [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:51]
+	Parameter CLK_1S bound to: 1000000 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element COUNT_SAN_reg was removed.  [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:41]
 INFO: [Synth 8-6155] done synthesizing module 'san_cnt' (1#1) [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:23]
 WARNING: [Synth 8-689] width (4) of port connection 'axi_awaddr' does not match port width (3) of module 'san_cnt' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:408]
-WARNING: [Synth 8-689] width (1) of port connection 'EXT_IRQ' does not match port width (32) of module 'san_cnt' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:409]
 INFO: [Synth 8-6155] done synthesizing module 'san_cnt_v1_0_S_AXI' (2#1) [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:4]
 INFO: [Synth 8-6157] synthesizing module 'san_cnt_v1_0_S_AXI_INTR' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI_INTR.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -97,6 +96,37 @@ WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AX
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[2]
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[7]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[6]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[5]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[4]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[3]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[2]
+WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[1]
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_AWPROT[1]
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_AWPROT[0]
@@ -104,22 +134,23 @@ WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_ARP
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 408.266 ; gain = 155.398
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 407.754 ; gain = 154.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 408.266 ; gain = 155.398
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 407.754 ; gain = 154.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 408.266 ; gain = 155.398
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 407.754 ; gain = 154.980
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5544] ROM "EXT_IRQ_RST" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "intr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 408.266 ; gain = 155.398
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 407.754 ; gain = 154.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -135,14 +166,15 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 4     
+	               32 Bit    Registers := 3     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 3     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 23    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 25    
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 11    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -154,7 +186,10 @@ Hierarchical RTL Component report
 Module san_cnt 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
 Module san_cnt_v1_0_S_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -218,31 +253,9 @@ WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdat
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[21]
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[20]
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[19]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[18]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[17]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[16]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[15]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[14]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[13]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[12]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[11]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[10]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[9]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[8]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[7]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[6]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[5]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[4]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[3]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wstrb[3]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wstrb[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wstrb[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wstrb[0]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_arprot[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_arprot[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_arprot[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[1] )
 INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[1]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[2]'
@@ -282,38 +295,12 @@ INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_inst/axi_rresp_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[1] )
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[31]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[30]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[29]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[28]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[27]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[26]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[25]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[24]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[23]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[22]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[21]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[20]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[19]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[18]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[17]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[16]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[15]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[14]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[13]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[12]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[11]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[10]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[9]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[8]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[7]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[6]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[5]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[4]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[3]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[2]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg[1]) is unused and will be removed from module san_cnt_v1_0.
+WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[1]) is unused and will be removed from module san_cnt_v1_0.
+WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/CNT_START_EN_reg) is unused and will be removed from module san_cnt_v1_0.
+WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module san_cnt_v1_0.
+WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module san_cnt_v1_0.
+WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module san_cnt_v1_0.
@@ -325,7 +312,7 @@ WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_ara
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[31]) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1]) is unused and will be removed from module san_cnt_v1_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 572.688 ; gain = 319.820
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 577.539 ; gain = 324.766
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,7 +325,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 572.688 ; gain = 319.820
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 577.539 ; gain = 324.766
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -350,7 +337,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -374,7 +361,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -387,7 +374,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,25 +386,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -436,13 +423,13 @@ Report Cell Usage:
 |1     |BUFG |     2|
 |2     |LUT1 |     4|
 |3     |LUT2 |     6|
-|4     |LUT3 |    34|
-|5     |LUT4 |    24|
-|6     |LUT5 |     1|
-|7     |LUT6 |     6|
-|8     |FDRE |    99|
+|4     |LUT3 |    36|
+|5     |LUT4 |    21|
+|6     |LUT5 |     2|
+|7     |LUT6 |     5|
+|8     |FDRE |    96|
 |9     |FDSE |     6|
-|10    |IBUF |    63|
+|10    |IBUF |    61|
 |11    |OBUF |    84|
 +------+-----+------+
 
@@ -450,19 +437,18 @@ Report Instance Areas:
 +------+-------------------------------+------------------------+------+
 |      |Instance                       |Module                  |Cells |
 +------+-------------------------------+------------------------+------+
-|1     |top                            |                        |   329|
+|1     |top                            |                        |   323|
 |2     |  san_cnt_v1_0_S_AXI_INTR_inst |san_cnt_v1_0_S_AXI_INTR |    56|
-|3     |  san_cnt_v1_0_S_AXI_inst      |san_cnt_v1_0_S_AXI      |   123|
-|4     |    U1                         |san_cnt                 |     5|
+|3     |  san_cnt_v1_0_S_AXI_inst      |san_cnt_v1_0_S_AXI      |   119|
 +------+-------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 141 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 573.699 ; gain = 320.832
+Synthesis finished with 0 errors, 0 critical warnings and 144 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -470,10 +456,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 141 Warnings, 0 Critical Warnings and 0 Errors encountered.
+63 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 677.434 ; gain = 436.324
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 681.910 ; gain = 441.340
 INFO: [Common 17-1381] The checkpoint 'D:/ZYNQ_study/zynq_project/san_counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1/san_cnt_v1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file san_cnt_v1_0_utilization_synth.rpt -pb san_cnt_v1_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 677.434 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 30 21:34:28 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 681.910 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 31 23:58:51 2022...
