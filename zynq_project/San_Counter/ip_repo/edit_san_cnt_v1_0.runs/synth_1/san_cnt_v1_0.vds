@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sat Dec 31 23:58:31 2022
-# Process ID: 17372
-# Current directory: D:/ZYNQ_study/zynq_project/san_counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1
+# Start of session at: Wed Jan  4 18:00:15 2023
+# Process ID: 6456
+# Current directory: D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1
 # Command line: vivado.exe -log san_cnt_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source san_cnt_v1_0.tcl
-# Log file: D:/ZYNQ_study/zynq_project/san_counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1/san_cnt_v1_0.vds
-# Journal file: D:/ZYNQ_study/zynq_project/san_counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1\vivado.jou
+# Log file: D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1/san_cnt_v1_0.vds
+# Journal file: D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source san_cnt_v1_0.tcl -notrace
 Command: synth_design -top san_cnt_v1_0 -part xc7z020clg400-1
@@ -15,88 +15,29 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23516 
+INFO: Helper process launched with PID 15920 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 353.211 ; gain = 100.438
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 353.457 ; gain = 100.055
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'san_cnt_v1_0' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'san_cnt_v1_0' [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0.v:4]
 	Parameter COUNT_DEPTH bound to: 8 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-	Parameter C_S_AXI_INTR_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S_AXI_INTR_ADDR_WIDTH bound to: 5 - type: integer 
-	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
-	Parameter C_INTR_SENSITIVITY bound to: -1 - type: integer 
-	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
-	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
-	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'san_cnt_v1_0_S_AXI' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'san_cnt_v1_0_S_AXI' [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:4]
 	Parameter COUNT_DEPTH bound to: 8 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:231]
-INFO: [Synth 8-226] default block is never used [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:374]
-INFO: [Synth 8-6157] synthesizing module 'san_cnt' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:23]
-	Parameter COUNT_DEPTH bound to: 8 - type: integer 
-	Parameter CLK_1S bound to: 1000000 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element COUNT_SAN_reg was removed.  [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:41]
-INFO: [Synth 8-6155] done synthesizing module 'san_cnt' (1#1) [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/src/san_cnt.v:23]
-WARNING: [Synth 8-689] width (4) of port connection 'axi_awaddr' does not match port width (3) of module 'san_cnt' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:408]
-INFO: [Synth 8-6155] done synthesizing module 'san_cnt_v1_0_S_AXI' (2#1) [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:4]
-INFO: [Synth 8-6157] synthesizing module 'san_cnt_v1_0_S_AXI_INTR' [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI_INTR.v:4]
+INFO: [Synth 8-226] default block is never used [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:231]
+INFO: [Synth 8-226] default block is never used [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:374]
+INFO: [Synth 8-6157] synthesizing module 'san_cnt' [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/src/san_cnt.v:23]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
-	Parameter C_INTR_SENSITIVITY bound to: -1 - type: integer 
-	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
-	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
-	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element intr_all_ff_reg was removed.  [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI_INTR.v:512]
-INFO: [Synth 8-6155] done synthesizing module 'san_cnt_v1_0_S_AXI_INTR' (3#1) [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI_INTR.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'san_cnt_v1_0' (4#1) [D:/ZYNQ_study/zynq_project/san_counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0.v:4]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[31]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[30]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[29]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[28]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[27]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[26]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[25]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[24]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[23]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[22]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[21]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[20]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[19]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[18]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[17]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[16]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[15]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[14]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[13]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[12]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[11]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[10]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[9]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[8]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[7]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[6]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[5]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[4]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[3]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WDATA[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[3]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_WSTRB[0]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI_INTR has unconnected port S_AXI_ARPROT[0]
+	Parameter CLK_1S bound to: 1000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'san_cnt' (1#1) [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/src/san_cnt.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'axi_awaddr' does not match port width (3) of module 'san_cnt' [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:412]
+INFO: [Synth 8-6155] done synthesizing module 'san_cnt_v1_0_S_AXI' (2#1) [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'san_cnt_v1_0' (3#1) [D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/san_cnt_1.0/hdl/san_cnt_v1_0.v:4]
 WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[31]
 WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[30]
 WARNING: [Synth 8-3331] design san_cnt has unconnected port S_AXI_WDATA[29]
@@ -135,23 +76,23 @@ WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_ARP
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design san_cnt_v1_0_S_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 407.754 ; gain = 154.980
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 408.039 ; gain = 154.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 407.754 ; gain = 154.980
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 408.039 ; gain = 154.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 407.754 ; gain = 154.980
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Synth 8-5544] ROM "EXT_IRQ_RST" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "intr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 407.754 ; gain = 154.980
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 408.039 ; gain = 154.637
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "EXT_IRQ_EN" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "EXT_IRQ_RST" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 408.039 ; gain = 154.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -165,18 +106,17 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 3     
-	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
-	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 25    
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 11    
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -186,11 +126,14 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module san_cnt 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
 Module san_cnt_v1_0_S_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -202,19 +145,6 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 5     
-Module san_cnt_v1_0_S_AXI_INTR 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 17    
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -232,88 +162,23 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_EN" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_awprot[2]
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_awprot[1]
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_awprot[0]
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_arprot[2]
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_arprot[1]
 WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_arprot[0]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_awprot[2]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_awprot[1]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_awprot[0]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[31]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[30]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[29]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[28]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[27]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[26]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[25]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[24]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[23]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[22]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[21]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[20]
-WARNING: [Synth 8-3331] design san_cnt_v1_0 has unconnected port s_axi_intr_wdata[19]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[1] )
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[1]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[2]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[2]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[3]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[3]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[4]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[4]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[5]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[5]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[6]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[6]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[7]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[7]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[8]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[8]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[9]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[9]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[10]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[10]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[11]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[11]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[12]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[12]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[13]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[13]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[14]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[14]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[15]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[15]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[16]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[16]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[17]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[17]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[18]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[18]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[19]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[19]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[20]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[20]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[21]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[21]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[22]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[22]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[23]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[23]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[24]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[24]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[25]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[25]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[26]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[26]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[27]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[27]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[28]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[28]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[29]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[29]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[30]'
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[30]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[31] )
-INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_INTR_inst/axi_bresp_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_INTR_inst/axi_bresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_INTR_inst/axi_bresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[1] )
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_CNT_reg[1]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/CNT_START_EN_reg) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/U1/EXT_IRQ_reg) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module san_cnt_v1_0.
 WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_bresp_reg[1]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_awaddr_reg[1]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_awaddr_reg[0]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_araddr_reg[1]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_araddr_reg[0]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_rdata_reg[31]) is unused and will be removed from module san_cnt_v1_0.
-WARNING: [Synth 8-3332] Sequential element (san_cnt_v1_0_S_AXI_INTR_inst/axi_rresp_reg[1]) is unused and will be removed from module san_cnt_v1_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 577.539 ; gain = 324.766
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -326,7 +191,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 577.539 ; gain = 324.766
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,7 +203,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -362,7 +227,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -375,7 +240,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -387,25 +252,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -418,38 +283,39 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |BUFG |     2|
-|2     |LUT1 |     4|
-|3     |LUT2 |     6|
-|4     |LUT3 |    36|
-|5     |LUT4 |    21|
-|6     |LUT5 |     2|
-|7     |LUT6 |     5|
-|8     |FDRE |    96|
-|9     |FDSE |     6|
-|10    |IBUF |    61|
-|11    |OBUF |    84|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     1|
+|4     |LUT2   |     1|
+|5     |LUT3   |     2|
+|6     |LUT4   |    43|
+|7     |LUT5   |    40|
+|8     |LUT6   |     4|
+|9     |FDRE   |   111|
+|10    |FDSE   |     1|
+|11    |IBUF   |    49|
+|12    |OBUF   |    42|
++------+-------+------+
 
 Report Instance Areas: 
-+------+-------------------------------+------------------------+------+
-|      |Instance                       |Module                  |Cells |
-+------+-------------------------------+------------------------+------+
-|1     |top                            |                        |   323|
-|2     |  san_cnt_v1_0_S_AXI_INTR_inst |san_cnt_v1_0_S_AXI_INTR |    56|
-|3     |  san_cnt_v1_0_S_AXI_inst      |san_cnt_v1_0_S_AXI      |   119|
-+------+-------------------------------+------------------------+------+
++------+--------------------------+-------------------+------+
+|      |Instance                  |Module             |Cells |
++------+--------------------------+-------------------+------+
+|1     |top                       |                   |   303|
+|2     |  san_cnt_v1_0_S_AXI_inst |san_cnt_v1_0_S_AXI |   211|
+|3     |    U1                    |san_cnt            |   124|
++------+--------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 144 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 578.047 ; gain = 325.273
+Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 573.785 ; gain = 320.383
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -457,10 +323,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-63 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 681.910 ; gain = 441.340
-INFO: [Common 17-1381] The checkpoint 'D:/ZYNQ_study/zynq_project/san_counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1/san_cnt_v1_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 681.328 ; gain = 439.945
+INFO: [Common 17-1381] The checkpoint 'D:/ZYNQ_study/zynq_project/San_Counter/ip_repo/edit_san_cnt_v1_0.runs/synth_1/san_cnt_v1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file san_cnt_v1_0_utilization_synth.rpt -pb san_cnt_v1_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 681.910 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 31 23:58:51 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 681.328 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  4 18:00:53 2023...

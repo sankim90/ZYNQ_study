@@ -13,75 +13,72 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ZYNQ_study/zynq_project/led_ip'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ZYNQ_study/zynq_project/San_Counter'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 290.074 ; gain = 48.219
 Command: synth_design -top system_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15608 
+INFO: Helper process launched with PID 1308 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 406.488 ; gain = 105.223
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 399.457 ; gain = 102.496
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'system' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:2068]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_bram_ctrl_0_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_bram_ctrl_0_0' (1#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_bram_ctrl_0_bram_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_bram_ctrl_0_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_bram_ctrl_0_bram_0' (2#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_bram_ctrl_0_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_bram_ctrl_0_bram' of module 'system_axi_bram_ctrl_0_bram_0' requires 8 connections, but only 7 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:2361]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_1' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_1' (3#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_led_ip_0_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_led_ip_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_led_ip_0_0' (4#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_led_ip_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (5#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:2731]
+INFO: [Synth 8-6157] synthesizing module 'system' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1484]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (1#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1826]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1H7AUOX' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:12]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (6#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_0' requires 56 connections, but only 54 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:235]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1H7AUOX' (7#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:12]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_4Y7TYO' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:292]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_1' (8#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_1_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_1' requires 56 connections, but only 54 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:515]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_4Y7TYO' (9#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:292]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_FKL2TE' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:572]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_2' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_2' (10#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_FKL2TE' (11#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:572]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_15QZ4LV' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:862]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15QZ4LV' (12#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:862]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_TUCI1Y' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1092]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_3' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_3' (13#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_TUCI1Y' (14#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1092]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1IWS6WN' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1382]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_4' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_4' (15#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1IWS6WN' (16#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1382]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11SE3QO' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1672]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_5' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_5' (17#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_auto_pc_5_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_5' requires 79 connections, but only 77 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1987]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11SE3QO' (18#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1672]
-INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (19#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (20#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:2731]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_ps7_0_100M_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps7_0_100M_0' (21#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:2656]
-INFO: [Synth 8-6157] synthesizing module 'system_san_cnt_0_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_san_cnt_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_san_cnt_0_0' (22#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_san_cnt_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'san_cnt_0' of module 'system_san_cnt_0_0' requires 44 connections, but only 43 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:2664]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (23#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-25060-San-desktop/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system' (24#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:2068]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (25#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1H7AUOX' (2#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_4Y7TYO' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_4Y7TYO' (3#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_FKL2TE' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_FKL2TE' (4#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:276]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_15QZ4LV' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:422]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15QZ4LV' (5#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:422]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_TUCI1Y' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:652]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (6#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_TUCI1Y' (7#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:652]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1IWS6WN' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:942]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1IWS6WN' (8#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:942]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11SE3QO' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1088]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_1' (9#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_auto_pc_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_1' requires 79 connections, but only 77 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1403]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11SE3QO' (10#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1088]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (11#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (10) of port connection 'm_axi_arburst' does not match port width (12) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3617]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axi_arcache' does not match port width (24) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3618]
+WARNING: [Synth 8-689] width (40) of port connection 'm_axi_arlen' does not match port width (48) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3619]
+WARNING: [Synth 8-689] width (5) of port connection 'm_axi_arlock' does not match port width (6) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3620]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axi_arqos' does not match port width (24) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3622]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axi_arregion' does not match port width (24) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3624]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_arsize' does not match port width (18) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3625]
+WARNING: [Synth 8-689] width (10) of port connection 'm_axi_awburst' does not match port width (12) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3628]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axi_awcache' does not match port width (24) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3629]
+WARNING: [Synth 8-689] width (40) of port connection 'm_axi_awlen' does not match port width (48) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3630]
+WARNING: [Synth 8-689] width (5) of port connection 'm_axi_awlock' does not match port width (6) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3631]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axi_awqos' does not match port width (24) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3633]
+WARNING: [Synth 8-689] width (20) of port connection 'm_axi_awregion' does not match port width (24) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3635]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_awsize' does not match port width (18) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3636]
+WARNING: [Synth 8-689] width (5) of port connection 'm_axi_wlast' does not match port width (6) of module 'system_xbar_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:3647]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (12#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1826]
+WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'system_ps7_0_axi_periph_0' requires 176 connections, but only 114 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1678]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ps7_0_100M_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps7_0_100M_0' (13#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1793]
+INFO: [Synth 8-6157] synthesizing module 'system_san_cnt_0_0' [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_san_cnt_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_san_cnt_0_0' (14#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/.Xil/Vivado-9184-DESKTOP-D5JKCJU/realtime/system_san_cnt_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system' (15#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/synth/system.v:1484]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (16#1) [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_11SE3QO has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_11SE3QO has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port M_ACLK
@@ -90,12 +87,95 @@ WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port S_A
 WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_bresp[1]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[31]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[30]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[29]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[28]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[27]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[26]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[25]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[24]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[23]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[22]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[21]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[20]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[19]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[18]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[17]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[16]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[15]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[14]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[13]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[12]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[11]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[10]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[9]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[8]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[7]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[6]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[5]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[4]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[3]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[2]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rdata[1]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_AXI_rresp[1]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_bresp[1]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[31]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[30]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[29]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[28]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[27]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[26]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[25]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[24]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[23]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[22]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[21]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[20]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[19]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[18]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[17]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[16]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[15]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[14]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[13]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[12]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[11]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[10]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[9]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[8]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[7]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[6]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[5]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[4]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[3]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[2]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rdata[1]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_AXI_rresp[1]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_bresp[1]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[31]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[30]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[29]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[28]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[27]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[26]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[25]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[24]
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_AXI_rdata[23]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 461.789 ; gain = 160.523
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 454.688 ; gain = 157.727
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -108,10 +188,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 461.789 ; gain = 160.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:39 . Memory (MB): peak = 454.688 ; gain = 157.727
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 461.789 ; gain = 160.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:39 . Memory (MB): peak = 454.688 ; gain = 157.727
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -120,38 +200,23 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
 Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/switches'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/switches'
 Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_in_context.xdc] for cell 'system_i/rst_ps7_0_100M'
 Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_in_context.xdc] for cell 'system_i/rst_ps7_0_100M'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1/system_axi_gpio_0_1_in_context.xdc] for cell 'system_i/buttons'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1/system_axi_gpio_0_1_in_context.xdc] for cell 'system_i/buttons'
 Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0/system_xbar_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/xbar'
 Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0/system_xbar_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/xbar'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_led_ip_0_0/system_led_ip_0_0/system_led_ip_0_0_in_context.xdc] for cell 'system_i/led_ip'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_led_ip_0_0/system_led_ip_0_0/system_led_ip_0_0_in_context.xdc] for cell 'system_i/led_ip'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0_in_context.xdc] for cell 'system_i/axi_bram_ctrl_0'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0_in_context.xdc] for cell 'system_i/axi_bram_ctrl_0'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/system_axi_bram_ctrl_0_bram_0/system_axi_bram_ctrl_0_bram_0_in_context.xdc] for cell 'system_i/axi_bram_ctrl_0_bram'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/system_axi_bram_ctrl_0_bram_0/system_axi_bram_ctrl_0_bram_0_in_context.xdc] for cell 'system_i/axi_bram_ctrl_0_bram'
 Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_san_cnt_0_0/system_san_cnt_0_0/system_san_cnt_0_0_in_context.xdc] for cell 'system_i/san_cnt_0'
 Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_san_cnt_0_0/system_san_cnt_0_0/system_san_cnt_0_0_in_context.xdc] for cell 'system_i/san_cnt_0'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_4/system_auto_pc_4/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_pc'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_4/system_auto_pc_4/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_pc'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_pc'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_pc'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m02_couplers/auto_pc'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m02_couplers/auto_pc'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m01_couplers/auto_pc'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m01_couplers/auto_pc'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m00_couplers/auto_pc'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m00_couplers/auto_pc'
-Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_5/system_auto_pc_5/system_auto_pc_5_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_5/system_auto_pc_5/system_auto_pc_5_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_pc'
+Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_4_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_pc'
+Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_5_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_5_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc:30]
 Finished Parsing XDC File [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/ZYNQ_study/digilent-xdc-master/Zybo-Z7-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/system_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 Parsing XDC File [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
@@ -159,22 +224,17 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 807.652 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'system_i/axi_bram_ctrl_0_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/ps7_0_axi_periph/m00_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/ps7_0_axi_periph/m01_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/ps7_0_axi_periph/m02_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 748.203 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/ps7_0_axi_periph/m04_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/ps7_0_axi_periph/m05_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 807.652 ; gain = 506.387
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:01:21 . Memory (MB): peak = 748.203 ; gain = 451.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 807.652 ; gain = 506.387
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:01:21 . Memory (MB): peak = 748.203 ; gain = 451.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -441,26 +501,17 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint fi
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  d:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property DONT_TOUCH = true for system_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/switches. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/buttons. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/led_ip. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/axi_bram_ctrl_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/axi_bram_ctrl_0_bram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/san_cnt_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 807.652 ; gain = 506.387
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:01:21 . Memory (MB): peak = 748.203 ; gain = 451.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 807.652 ; gain = 506.387
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:01:22 . Memory (MB): peak = 748.203 ; gain = 451.242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -495,20 +546,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_ACLK
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_ACLK
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_ACLK
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M03_ACLK
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M04_ACLK
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_ACLK
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 807.652 ; gain = 506.387
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:22 . Memory (MB): peak = 748.203 ; gain = 451.242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -522,13 +561,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/processing_system7_0/FCLK_CLK0' to pin 'system_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 809.766 ; gain = 508.500
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:40 . Memory (MB): peak = 797.562 ; gain = 500.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 810.137 ; gain = 508.871
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:40 . Memory (MB): peak = 797.859 ; gain = 500.898
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -540,7 +579,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 812.105 ; gain = 510.840
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:40 . Memory (MB): peak = 798.570 ; gain = 501.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -564,7 +603,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 812.172 ; gain = 510.906
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:01:41 . Memory (MB): peak = 799.133 ; gain = 502.172
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -577,7 +616,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 812.172 ; gain = 510.906
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:01:41 . Memory (MB): peak = 799.133 ; gain = 502.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -589,25 +628,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 812.172 ; gain = 510.906
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:01:41 . Memory (MB): peak = 799.133 ; gain = 502.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 812.172 ; gain = 510.906
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:01:41 . Memory (MB): peak = 799.133 ; gain = 502.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 812.172 ; gain = 510.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:01:41 . Memory (MB): peak = 799.133 ; gain = 502.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 812.172 ; gain = 510.906
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:01:41 . Memory (MB): peak = 799.133 ; gain = 502.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -620,18 +659,9 @@ Report BlackBoxes:
 |1     |system_xbar_0                 |         1|
 |2     |system_auto_pc_0              |         1|
 |3     |system_auto_pc_1              |         1|
-|4     |system_auto_pc_2              |         1|
-|5     |system_auto_pc_3              |         1|
-|6     |system_auto_pc_4              |         1|
-|7     |system_auto_pc_5              |         1|
-|8     |system_axi_bram_ctrl_0_0      |         1|
-|9     |system_axi_bram_ctrl_0_bram_0 |         1|
-|10    |system_axi_gpio_0_1           |         1|
-|11    |system_led_ip_0_0             |         1|
-|12    |system_processing_system7_0_0 |         1|
-|13    |system_rst_ps7_0_100M_0       |         1|
-|14    |system_san_cnt_0_0            |         1|
-|15    |system_axi_gpio_0_0           |         1|
+|4     |system_processing_system7_0_0 |         1|
+|5     |system_rst_ps7_0_100M_0       |         1|
+|6     |system_san_cnt_0_0            |         1|
 +------+------------------------------+----------+
 
 Report Cell Usage: 
@@ -640,56 +670,39 @@ Report Cell Usage:
 +------+------------------------------+------+
 |1     |system_auto_pc_0              |     1|
 |2     |system_auto_pc_1              |     1|
-|3     |system_auto_pc_2              |     1|
-|4     |system_auto_pc_3              |     1|
-|5     |system_auto_pc_4              |     1|
-|6     |system_auto_pc_5              |     1|
-|7     |system_axi_bram_ctrl_0_0      |     1|
-|8     |system_axi_bram_ctrl_0_bram_0 |     1|
-|9     |system_axi_gpio_0_0           |     1|
-|10    |system_axi_gpio_0_1           |     1|
-|11    |system_led_ip_0_0             |     1|
-|12    |system_processing_system7_0_0 |     1|
-|13    |system_rst_ps7_0_100M_0       |     1|
-|14    |system_san_cnt_0_0            |     1|
-|15    |system_xbar_0                 |     1|
-|16    |IBUF                          |     8|
-|17    |OBUF                          |     4|
+|3     |system_processing_system7_0_0 |     1|
+|4     |system_rst_ps7_0_100M_0       |     1|
+|5     |system_san_cnt_0_0            |     1|
+|6     |system_xbar_0                 |     1|
 +------+------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+--------------------------+------+
 |      |Instance             |Module                    |Cells |
 +------+---------------------+--------------------------+------+
-|1     |top                  |                          |  2612|
-|2     |  system_i           |system                    |  2600|
-|3     |    ps7_0_axi_periph |system_ps7_0_axi_periph_0 |  2069|
-|4     |      m00_couplers   |m00_couplers_imp_1H7AUOX  |   153|
-|5     |      m01_couplers   |m01_couplers_imp_4Y7TYO   |   153|
-|6     |      m02_couplers   |m02_couplers_imp_FKL2TE   |   153|
-|7     |      m04_couplers   |m04_couplers_imp_TUCI1Y   |   153|
-|8     |      m05_couplers   |m05_couplers_imp_1IWS6WN  |   153|
-|9     |      s00_couplers   |s00_couplers_imp_11SE3QO  |   254|
+|1     |top                  |                          |  1692|
+|2     |  system_i           |system                    |  1692|
+|3     |    ps7_0_axi_periph |system_ps7_0_axi_periph_0 |  1457|
+|4     |      m04_couplers   |m04_couplers_imp_TUCI1Y   |   153|
+|5     |      s00_couplers   |s00_couplers_imp_11SE3QO  |   254|
 +------+---------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 812.172 ; gain = 510.906
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:01:41 . Memory (MB): peak = 799.133 ; gain = 502.172
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 812.176 ; gain = 165.047
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 812.176 ; gain = 510.910
+Synthesis finished with 0 errors, 0 critical warnings and 177 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:01:12 . Memory (MB): peak = 799.180 ; gain = 208.703
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:01:42 . Memory (MB): peak = 799.180 ; gain = 502.219
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-68 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 835.719 ; gain = 541.359
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:49 . Memory (MB): peak = 826.969 ; gain = 536.895
 INFO: [Common 17-1381] The checkpoint 'D:/ZYNQ_study/zynq_project/lab6_IRQ/lab6_IRQ.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 836.020 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Jan  1 00:04:37 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 826.969 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  4 18:10:50 2023...

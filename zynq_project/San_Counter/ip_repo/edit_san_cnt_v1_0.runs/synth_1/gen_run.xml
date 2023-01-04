@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1672498709">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1672822811">
   <File Type="PA-TCL" Name="san_cnt_v1_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="san_cnt_v1_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="san_cnt_v1_0_reports.tcl"/>
@@ -19,13 +19,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/san_cnt_1.0/hdl/san_cnt_v1_0_S_AXI_INTR.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

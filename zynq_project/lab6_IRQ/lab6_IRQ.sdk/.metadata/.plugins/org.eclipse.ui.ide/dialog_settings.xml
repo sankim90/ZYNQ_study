@@ -3,4 +3,17 @@
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
 		<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.sdk\system_wrapper_hw_platform_2"/>
+			<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.sdk\lab6_test"/>
+			<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.sdk\lab6_test_bsp"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 </section>

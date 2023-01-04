@@ -9,19 +9,13 @@ vlib questa_lib/msim/smartconnect_v1_0
 vlib questa_lib/msim/axi_protocol_checker_v2_0_2
 vlib questa_lib/msim/axi_vip_v1_1_2
 vlib questa_lib/msim/processing_system7_vip_v1_0_4
-vlib questa_lib/msim/axi_lite_ipif_v3_0_4
 vlib questa_lib/msim/lib_cdc_v1_0_2
-vlib questa_lib/msim/interrupt_control_v3_1_4
-vlib questa_lib/msim/axi_gpio_v2_0_18
 vlib questa_lib/msim/proc_sys_reset_v5_0_12
 vlib questa_lib/msim/generic_baseblocks_v2_1_0
 vlib questa_lib/msim/axi_register_slice_v2_1_16
 vlib questa_lib/msim/fifo_generator_v13_2_2
 vlib questa_lib/msim/axi_data_fifo_v2_1_15
 vlib questa_lib/msim/axi_crossbar_v2_1_17
-vlib questa_lib/msim/blk_mem_gen_v8_3_6
-vlib questa_lib/msim/axi_bram_ctrl_v4_0_14
-vlib questa_lib/msim/blk_mem_gen_v8_4_1
 vlib questa_lib/msim/axi_protocol_converter_v2_1_16
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
@@ -32,19 +26,13 @@ vmap smartconnect_v1_0 questa_lib/msim/smartconnect_v1_0
 vmap axi_protocol_checker_v2_0_2 questa_lib/msim/axi_protocol_checker_v2_0_2
 vmap axi_vip_v1_1_2 questa_lib/msim/axi_vip_v1_1_2
 vmap processing_system7_vip_v1_0_4 questa_lib/msim/processing_system7_vip_v1_0_4
-vmap axi_lite_ipif_v3_0_4 questa_lib/msim/axi_lite_ipif_v3_0_4
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
-vmap interrupt_control_v3_1_4 questa_lib/msim/interrupt_control_v3_1_4
-vmap axi_gpio_v2_0_18 questa_lib/msim/axi_gpio_v2_0_18
 vmap proc_sys_reset_v5_0_12 questa_lib/msim/proc_sys_reset_v5_0_12
 vmap generic_baseblocks_v2_1_0 questa_lib/msim/generic_baseblocks_v2_1_0
 vmap axi_register_slice_v2_1_16 questa_lib/msim/axi_register_slice_v2_1_16
 vmap fifo_generator_v13_2_2 questa_lib/msim/fifo_generator_v13_2_2
 vmap axi_data_fifo_v2_1_15 questa_lib/msim/axi_data_fifo_v2_1_15
 vmap axi_crossbar_v2_1_17 questa_lib/msim/axi_crossbar_v2_1_17
-vmap blk_mem_gen_v8_3_6 questa_lib/msim/blk_mem_gen_v8_3_6
-vmap axi_bram_ctrl_v4_0_14 questa_lib/msim/axi_bram_ctrl_v4_0_14
-vmap blk_mem_gen_v8_4_1 questa_lib/msim/blk_mem_gen_v8_4_1
 vmap axi_protocol_converter_v2_1_16 questa_lib/msim/axi_protocol_converter_v2_1_16
 
 vlog -work xilinx_vip -64 -sv -L smartconnect_v1_0 -L axi_protocol_checker_v2_0_2 -L axi_vip_v1_1_2 -L processing_system7_vip_v1_0_4 -L xilinx_vip "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
@@ -84,27 +72,14 @@ vlog -work processing_system7_vip_v1_0_4 -64 -sv -L smartconnect_v1_0 -L axi_pro
 vlog -work xil_defaultlib -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v" \
 
-vcom -work axi_lite_ipif_v3_0_4 -64 -93 \
-"../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
-
 vcom -work lib_cdc_v1_0_2 -64 -93 \
 "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
-
-vcom -work interrupt_control_v3_1_4 -64 -93 \
-"../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/8e66/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
-
-vcom -work axi_gpio_v2_0_18 -64 -93 \
-"../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/fbf9/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" \
 
 vcom -work proc_sys_reset_v5_0_12 -64 -93 \
 "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/system/ip/system_rst_ps7_0_100M_0/sim/system_rst_ps7_0_100M_0.vhd" \
-"../../../bd/system/ip/system_axi_gpio_0_1/sim/system_axi_gpio_0_1.vhd" \
 
 vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
 "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -129,42 +104,18 @@ vlog -work axi_crossbar_v2_1_17 -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_xbar_0/sim/system_xbar_0.v" \
-"../../../bd/system/ipshared/c611/hdl/led_ip_v1_0_S_AXI.v" \
-"../../../bd/system/ipshared/c611/src/lab3_user_logic.v" \
-"../../../bd/system/ipshared/c611/hdl/led_ip_v1_0.v" \
-"../../../bd/system/ip/system_led_ip_0_0/sim/system_led_ip_0_0.v" \
-
-vlog -work blk_mem_gen_v8_3_6 -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
-"../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/2751/simulation/blk_mem_gen_v8_3.v" \
-
-vcom -work axi_bram_ctrl_v4_0_14 -64 -93 \
-"../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/system/ip/system_axi_bram_ctrl_0_0/sim/system_axi_bram_ctrl_0_0.vhd" \
-
-vlog -work blk_mem_gen_v8_4_1 -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
-"../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/67d8/simulation/blk_mem_gen_v8_4.v" \
-
-vlog -work xil_defaultlib -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
-"../../../bd/system/ip/system_axi_bram_ctrl_0_bram_0/sim/system_axi_bram_ctrl_0_bram_0.v" \
 "../../../bd/system/sim/system.v" \
-"../../../bd/system/ipshared/4a09/hdl/san_cnt_v1_0_S_AXI.v" \
-"../../../bd/system/ipshared/4a09/hdl/san_cnt_v1_0_S_AXI_INTR.v" \
-"../../../bd/system/ipshared/4a09/src/san_cnt.v" \
-"../../../bd/system/ipshared/4a09/hdl/san_cnt_v1_0.v" \
+"../../../bd/system/ipshared/e91a/hdl/san_cnt_v1_0_S_AXI.v" \
+"../../../bd/system/ipshared/e91a/src/san_cnt.v" \
+"../../../bd/system/ipshared/e91a/hdl/san_cnt_v1_0.v" \
 "../../../bd/system/ip/system_san_cnt_0_0/sim/system_san_cnt_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_16 -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
 "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/1229/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/02c8/hdl/verilog" "+incdir+../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b193/hdl" "+incdir+C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
-"../../../bd/system/ip/system_auto_pc_4/sim/system_auto_pc_4.v" \
-"../../../bd/system/ip/system_auto_pc_3/sim/system_auto_pc_3.v" \
-"../../../bd/system/ip/system_auto_pc_2/sim/system_auto_pc_2.v" \
-"../../../bd/system/ip/system_auto_pc_1/sim/system_auto_pc_1.v" \
 "../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
-"../../../bd/system/ip/system_auto_pc_5/sim/system_auto_pc_5.v" \
+"../../../bd/system/ip/system_auto_pc_1/sim/system_auto_pc_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

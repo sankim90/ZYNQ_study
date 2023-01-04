@@ -21,7 +21,7 @@
 
 
 module san_cnt # (
-    parameter  COUNT_DEPTH            = 20
+    parameter  C_S_AXI_DATA_WIDTH            = 32
     )
     (
     input S_AXI_ACLK,
@@ -29,14 +29,14 @@ module san_cnt # (
     input [2:0] axi_awaddr,
     input [31:0] S_AXI_WDATA,
     input S_AXI_ARESETN,
-    output reg EXT_IRQ
-//    ,output reg [COUNT_DEPTH - 1 : 0] COUNT_SAN
+    output reg EXT_IRQ,
+    output reg [1:0] EXT_IRQ_CNT,
+    output reg [C_S_AXI_DATA_WIDTH - 1 : 0] COUNT_SAN
     );
-    localparam  CLK_1S = 1000000;
     
-    reg [COUNT_DEPTH - 1 : 0] COUNT_SAN;
-    reg [1:0] EXT_IRQ_CNT;
+    localparam  CLK_1S = 1000000;
     reg CNT_START_EN;
+        
     
     wire EXT_IRQ_EN = (COUNT_SAN == CLK_1S) ? 1 : 0;
     wire EXT_IRQ_RST = (EXT_IRQ_CNT == 3) ? 1 : 0;
@@ -49,6 +49,8 @@ module san_cnt # (
             COUNT_SAN <= 0;
         else if(CNT_START_EN)
             COUNT_SAN <= COUNT_SAN + 1;
+		else
+			COUNT_SAN <= 0;
     end
     
     always @ ( posedge S_AXI_ACLK )
@@ -57,6 +59,8 @@ module san_cnt # (
             EXT_IRQ_CNT <= 0;
         else if(EXT_IRQ_EN)
             EXT_IRQ_CNT <= EXT_IRQ_CNT + 1;
+		else
+			EXT_IRQ_CNT <= 0;
     end
     
      always @ ( posedge S_AXI_ACLK )
@@ -64,7 +68,7 @@ module san_cnt # (
            if ( S_AXI_ARESETN == 1'b0 )
                CNT_START_EN <= 0;
            else if (slv_reg_wren && (axi_awaddr == 3'h0))
-               CNT_START_EN <= S_AXI_WDATA;
+               CNT_START_EN <= S_AXI_WDATA[0];
        end    
 
     always @ ( posedge S_AXI_ACLK )

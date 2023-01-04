@@ -26,6 +26,7 @@ reg clk, rst;
 reg wren;
 reg [2:0] axi_awaddr_tb;
 reg [31:0] S_AXI_WDATA;
+reg [3:0] input_test;
 wire EXT_IRQ;
 //wire [8 - 1 : 0] COUNT_SAN;
     
@@ -38,6 +39,7 @@ initial begin
     clk <= 1;
     rst <= 0;
     wren <= 0;
+    input_test <= 4'hF;
     axi_awaddr_tb <= 0;
     S_AXI_WDATA <= 0;
     #10

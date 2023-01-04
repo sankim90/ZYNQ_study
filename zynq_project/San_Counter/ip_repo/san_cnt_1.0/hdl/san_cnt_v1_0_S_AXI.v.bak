@@ -104,10 +104,10 @@
 	//-- Signals for user logic register space example
 	//------------------------------------------------
 	//-- Number of Slave Registers 4
-	wire [C_S_AXI_DATA_WIDTH-1:0]	slv_reg0;
+	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg0;
 	wire [C_S_AXI_DATA_WIDTH-1:0]	slv_reg1;
 	wire [C_S_AXI_DATA_WIDTH-1:0]	slv_reg2;
-	reg [C_S_AXI_DATA_WIDTH-1:0]	slv_reg3;
+	wire [C_S_AXI_DATA_WIDTH-1:0]	slv_reg3;
 	wire	 slv_reg_rden;
 	wire	 slv_reg_wren;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	 reg_data_out;
@@ -220,10 +220,10 @@
 	begin
 	  if ( S_AXI_ARESETN == 1'b0 )
 	    begin
-//	      slv_reg0 <= 0;
+	      slv_reg0 <= 0;
 //	      slv_reg1 <= 0;
 //	      slv_reg2 <= 0;
-	      slv_reg3 <= 0;
+//	      slv_reg3 <= 0;
 	    end 
 	  else begin
 	    if (slv_reg_wren)
@@ -235,7 +235,7 @@
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 0
 	                // assign in user logic
-//	                slv_reg0[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	                slv_reg0[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
 	          2'h1:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
@@ -257,13 +257,13 @@
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 3
-	                slv_reg3[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+//	                slv_reg3[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
 	          default : begin
-//	                      slv_reg0 <= slv_reg0;
+	                      slv_reg0 <= slv_reg0;
 //	                      slv_reg1 <= slv_reg1;
-						//slv_reg2 <= slv_reg2;
-	                      slv_reg3 <= slv_reg3;
+//						  slv_reg2 <= slv_reg2;
+//	                      slv_reg3 <= slv_reg3;
 	                    end
 	        endcase
 	      end
@@ -400,13 +400,13 @@
 	end    
 
 	// Add user logic here
-	assign slv_reg0 = EXT_IRQ;
-    assign slv_reg1 = 8'hFF;
+    assign slv_reg1 = EXT_IRQ;
+	assign slv_reg2 = CNT_START_EN;
+	assign slv_reg3 = axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB];
     
     san_cnt # ( .COUNT_DEPTH(COUNT_DEPTH))    
     U1( .S_AXI_ACLK(S_AXI_ACLK), .slv_reg_wren(slv_reg_wren), .axi_awaddr(axi_awaddr),
-        .S_AXI_ARESETN(S_AXI_ARESETN), .S_AXI_WDATA(S_AXI_WDATA), .EXT_IRQ(EXT_IRQ)
-    //    , .COUNT_SAN(COUNT_SAN)
+        .S_AXI_ARESETN(S_AXI_ARESETN), .S_AXI_WDATA(S_AXI_WDATA), .EXT_IRQ(EXT_IRQ), .CNT_START_EN(CNT_START_EN)
     );
 	// User logic ends
 

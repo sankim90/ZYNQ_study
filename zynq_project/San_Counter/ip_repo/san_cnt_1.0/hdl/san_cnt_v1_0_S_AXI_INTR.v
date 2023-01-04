@@ -462,7 +462,7 @@
 	    if ( S_AXI_ARESETN == 1'b0)                                          
 	      begin                                                              
 	        intr <= {C_NUM_OF_INTR{1'b0}};                                   
-	      end                                                                
+	      end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 	    else                                                                 
 	      begin                                                              
 	        if (intr_counter[3:0] == 10)                                     

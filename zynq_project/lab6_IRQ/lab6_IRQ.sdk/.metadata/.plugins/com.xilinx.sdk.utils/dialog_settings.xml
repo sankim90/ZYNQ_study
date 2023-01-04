@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.sdk\SAN_CNT_WRAPPER" key="com.xilinx.sdk.hw.ui.hwspec.last"/>
 	<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.runs\impl_1" key="program_fpga_view_bit_bmm_browse_key"/>
-	<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.runs\impl_1" key="last_stored_selection"/>
+	<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.sdk\SAN_CNT_WRAPPER" key="hwspec_file_selection"/>
+	<item value="D:\ZYNQ_study\zynq_project\lab6_IRQ\lab6_IRQ.sdk\SAN_CNT_WRAPPER" key="last_stored_selection"/>
 </section>

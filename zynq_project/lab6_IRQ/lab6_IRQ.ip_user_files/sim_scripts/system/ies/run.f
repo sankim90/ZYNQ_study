@@ -35,27 +35,14 @@
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v" \
 -endlib
--makelib ies_lib/axi_lite_ipif_v3_0_4 \
-  "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
--endlib
 -makelib ies_lib/lib_cdc_v1_0_2 \
   "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib ies_lib/interrupt_control_v3_1_4 \
-  "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/8e66/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
--endlib
--makelib ies_lib/axi_gpio_v2_0_18 \
-  "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/fbf9/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" \
 -endlib
 -makelib ies_lib/proc_sys_reset_v5_0_12 \
   "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system/ip/system_rst_ps7_0_100M_0/sim/system_rst_ps7_0_100M_0.vhd" \
-  "../../../bd/system/ip/system_axi_gpio_0_1/sim/system_axi_gpio_0_1.vhd" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -80,42 +67,18 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system/ip/system_xbar_0/sim/system_xbar_0.v" \
-  "../../../bd/system/ipshared/c611/hdl/led_ip_v1_0_S_AXI.v" \
-  "../../../bd/system/ipshared/c611/src/lab3_user_logic.v" \
-  "../../../bd/system/ipshared/c611/hdl/led_ip_v1_0.v" \
-  "../../../bd/system/ip/system_led_ip_0_0/sim/system_led_ip_0_0.v" \
--endlib
--makelib ies_lib/blk_mem_gen_v8_3_6 \
-  "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/2751/simulation/blk_mem_gen_v8_3.v" \
--endlib
--makelib ies_lib/axi_bram_ctrl_v4_0_14 \
-  "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/system/ip/system_axi_bram_ctrl_0_0/sim/system_axi_bram_ctrl_0_0.vhd" \
--endlib
--makelib ies_lib/blk_mem_gen_v8_4_1 \
-  "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/67d8/simulation/blk_mem_gen_v8_4.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/system/ip/system_axi_bram_ctrl_0_bram_0/sim/system_axi_bram_ctrl_0_bram_0.v" \
   "../../../bd/system/sim/system.v" \
-  "../../../bd/system/ipshared/4a09/hdl/san_cnt_v1_0_S_AXI.v" \
-  "../../../bd/system/ipshared/4a09/hdl/san_cnt_v1_0_S_AXI_INTR.v" \
-  "../../../bd/system/ipshared/4a09/src/san_cnt.v" \
-  "../../../bd/system/ipshared/4a09/hdl/san_cnt_v1_0.v" \
+  "../../../bd/system/ipshared/e91a/hdl/san_cnt_v1_0_S_AXI.v" \
+  "../../../bd/system/ipshared/e91a/src/san_cnt.v" \
+  "../../../bd/system/ipshared/e91a/hdl/san_cnt_v1_0.v" \
   "../../../bd/system/ip/system_san_cnt_0_0/sim/system_san_cnt_0_0.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_16 \
   "../../../../lab6_IRQ.srcs/sources_1/bd/system/ipshared/1229/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/system/ip/system_auto_pc_4/sim/system_auto_pc_4.v" \
-  "../../../bd/system/ip/system_auto_pc_3/sim/system_auto_pc_3.v" \
-  "../../../bd/system/ip/system_auto_pc_2/sim/system_auto_pc_2.v" \
-  "../../../bd/system/ip/system_auto_pc_1/sim/system_auto_pc_1.v" \
   "../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
-  "../../../bd/system/ip/system_auto_pc_5/sim/system_auto_pc_5.v" \
+  "../../../bd/system/ip/system_auto_pc_1/sim/system_auto_pc_1.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v
